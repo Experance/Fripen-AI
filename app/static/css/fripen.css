@@ -1,0 +1,274 @@
+
+html {
+	font-family: sans-serif;
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    /*background: url("../images1/blue.jpg") !important no-repeat;*/
+    background-image: linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% );
+    background-repeat:no-repeat;
+    /*background-size: cover !important;*/
+    height: 100%;
+   
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    -o-object-fit: contain;
+    object-fit: contain;
+    overflow: hidden;
+    
+    
+    
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    /*position: absolute;
+    left: 10rem;
+    top: 6rem;*/
+    font-size: 4.5rem;
+    font-family: Oswald;
+    letter-spacing: 3px;
+}
+
+
+
+.p1{
+    /*position: relative;
+    left: 10rem;
+    top: 18rem;*/
+    font-size: 1.3rem;
+    font-family: Oswald;
+    color: white;
+}
+
+
+a{
+    /*position: relative;*/
+    background-color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 50px 30px;
+    transition: 0.5s;
+}
+
+.btn-1{
+    /*position: absolute;
+    left: 12rem;
+    top: 35rem;*/
+    background-color: green;
+    font-family: Oswald;
+    color: transparent;
+    border-radius: 90px;
+    height: -90px;
+    width: 205px;
+    transition: transform 0.3s ease;
+}
+
+.btn-1::after, .btn-1::before{
+    content: '';
+    /*position: absolute;*/
+    opacity: 0.3;
+    background: green;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    /*left: 0;
+    bottom: 0;*/
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.btn-1:hover{
+    transform: translate(-12px, -12px);
+}
+
+.btn-1::after{
+    transform: translate(6px, 6px);
+}
+
+.btn-1::before{
+    transform: translate(12px, 12px);
+}
+
+
+.greenhouse{
+    /*position: absolute;
+    left: 55rem;
+    top: 3rem; */
+    width: 100%; 
+    height: 100%;
+}
+
+
+nav{
+    background: transparent;
+    height: 10rem;
+    width: 100%;
+    position: absolute;
+    top: 0.1rem;
+    
+}
+
+.navstuff {
+
+    position: relative;
+    
+    
+}
+
+label.logo{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 45px;
+    position: relative;
+    left: 1rem;
+    top: 0rem;
+    line-height: 80px;
+    padding: 0 0rem;
+    font-weight: 1000;
+    font-family: Oswald;
+    letter-spacing: 0.2px;
+    margin-left: -2rem;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: green;
+    background-color: transparent;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-family: Oswald;
+}
+
+.outer {
+    /*margin-left: 2%;
+    margin-right: 30%;*/
+    margin-bottom: 2%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.inner {
+    /*flex-grow: 1;*/
+}
+
+#left {
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#textleft {
+    /*flex-grow: 1;*/
+    flex-basis: 50%;
+}
+
+#buttonleft {
+    /*flex-grow: 1*/
+    flex-basis: 25%;
+    
+}
+
+.logothings {
+    
+}
+ .logo-image{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -3px;
+    margin-left: 2rem;
+    
+}
+
+/* MEDIA QUERIES */
+
+@media all and (min-width: 1800px){
+  h1{
+    color: white;
+    font-size: 5.5rem;
+    margin-left: -100px;
+    margin-bottom: 30px;
+    padding-top: 40px;
+ }
+    .greenhouse{
+    width: 130%;
+ }
+    .p1{
+    font-size: 2rem;
+    font-family: Oswald;
+    color: white;
+    margin: auto;
+    margin-left: -100px;
+    width: 50rem;
+ }
+    label.logo{
+    font-size: 60px;
+ }
+     #buttonleft{
+    align-self: flex-start;
+    flex-basis: 20%;
+ }
+}
+
+
+@media all and (max-width: 1440px){
+    #buttonleft{
+    align-self: flex-start;
+    flex-basis: 1%;
+ }
+    h1{
+    color: white;
+    font-size: 3rem;
+    margin-left: -50px;
+ }
+    #textleft {
+
+    }
+    .outer {
+        justify-content: space-between;
+    }
+    .p1{
+    font-size: 1.5rem;
+    font-family: Oswald;
+    color: white;
+    margin: auto;
+    margin-left: -50px;
+    width: 36rem;
+ }
+    .heading1 {
+        margin-top: 0px
+    }
+    
+    .btn-cust {
+        margin-top: 0px
+        margin-bottom: 0px;
+        display: relative;
+    }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/ai-camp-logo-128x128.png')}}" type="image/x-icon">
+    <meta name="description" content="">
+
+    <title>results</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='plugins/fontawesome/css/all.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+
+<body style = "overflow-y: visible; width: 100%;">
+    <!-- NAVBAR
+    ================================================= -->
+ <!-- Navigation-->
+    <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a href="home.html"><strong>Ripen</strong></a>
+        </li>
+
+        <li class="sidebar-nav-item">
+          <a href="home.html">Home</a>
+        </li>
+
+        <li class="sidebar-nav-item">
+          <a href="aboutus.html">About</a>
+        </li>
+
+        <li class="sidebar-nav-item">
+          <a href="data.html">Data</a>
+        </li>
+
+        <li class="sidebar-nav-item">
+          <a href="ourjourney.html">The Journey</a>
+        </li>
+
+      </ul>
+    </nav>
+    <a id="home"></a>
+
+    <section id="msg-box4-2" data-rv-view="2" style="background-color: none;  padding-bottom: 0rem;">
+            <div class="container">  
+        <div class="row">
+                <div class="col justify-content-center align-items-center text-center" style = "margin-top: 5rem">
+                    <h3 class="section-title display-4">Recognition Results</h3>
+                    <h3 class="we-found btn-text display-4">We found <strong><span style='text-transform: capitalize;'>{{labels}}!</span></strong></h3>
+
+                    {% if labels == 'no emotion' %}
+                    <div>Why might we have missed? Check below!</div>
+                    {% else %}
+                    <div class="lead"><em>with {{ confidences }} confidence.</em></div>
+                    {% endif %}
+
+                </div>
+                <div class="col">
+                    <img class="mbr-figure" src="{{ url_for('static', filename='uploads/' + filename)}}" style = "margin-top:2rem">
+                </div>
+                </div>
+            </div>
+    </section>
+
+    
+      <div class = "text-center" style = "width: 100%">
+    <h3 class="section-title display-4 results-title text-center" style="margin-left: 90px; font-size: 35px;">Why do we miss sometimes?</h3>
+        
+        <div>
+                        <p class="section-text results-text" style="font-size: 19px; width: 60%; margin: auto; margin-top: 1rem">Given just three weeks, we only had time to train our model with 3 fruits on approximately 1000 images. If we had more time, we could have improved our model's performance!</p>
+          
+          <h3 class="section-title display-4 results-title text-center" style="margin-left: 90px; font-size: 35px;">What are some challenges of Computer Vision?</h3>
+        
+        <div>
+                        <p class="section-text results-text" style="font-size: 19px; width: 60%; margin: auto; padding-bottom: 3rem; margin-top: 1rem">Computer Vision is very limited. The computer takes in an image as a bunch of numbers and it's job is to identify patterns; The model needs to be conscious and have a lot of context in order to identify things, we need to continuously monitor the model's progress. But take the context of said model and compare it to that of the human brain, a lifetime of continuously training and taking input versus our model, which is a small fraction compared to the human brain.</p>
+          
+       </div>
+      </div>
+
+
+
+
+
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+
+<!--<p>
+  Why might we have missed this? Given just three weeks, we only had time to train our model with 3 fruits on approximately 1000 images. If we had more time, we could have improved our model's performance!
+  </p> -->
+
+
+    <script src="{{ url_for('static', filename='plugins/jquery/jquery.min.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/theme.js')}}"></script>
+    <script>
+        // added to get upload with a button working
+        document.getElementById('seefood_button').addEventListener('click', openDialog);
+
+        function openDialog() {
+            document.getElementById('seefood_input_field').click();
+        }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#spinner").bind("ajaxSend", function() {
+                $(this).show();
+            }).bind("ajaxStop", function() {
+                $(this).hide();
+            }).bind("ajaxError", function() {
+                $(this).hide();
+            });
+            // seefood_input_field
+            $('#seefood_button').click(function() {
+
+            });
+        });
+    </script>
+             <script src="js/scripts.js"></script> 
+    <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
+</body>
+
+</html>

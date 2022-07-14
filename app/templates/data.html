@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="it">
+  <meta name="keywords" content="AI, Emotion Detector, AI Project, Deep Learning">
+  
+  <meta name="author" content="">
+
+  <title>Fruit Ripeness Detector</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/plugins/fontawesome/css/all.css">
+
+  <!-- Main Stylesheet -->
+         <link rel= "stylesheet" type= "text/css" href= "../static/css/data-style.css">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/data-style.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+  
+    <!-- temp ico need to replace-->
+    <link href="static/favicon.ico" rel="icon" type="image/x-icon">
+    <!-- Font Awesome icons (free version)-->
+
+    <script crossorigin="anonymous" src=
+    "https://use.fontawesome.com/releases/v6.1.0/js/all.js"></script>
+  
+</head>
+
+
+<body id="top-header align-items-center" style = "background: url({{ url_for('static', filename='images1/blue.jpg') }}); background-size: cover; height: 100%; overflow: visible">
+
+
+<!-- LOADER TEMPLATE -->
+<div id="page-loader">
+    <div class="loader-icon fa fa-spin colored-border"></div>
+</div>
+<!-- /LOADER TEMPLATE -->
+
+     <!-- NAVBAR
+    ================================================= -->
+        
+    <!-- Navigation-->
+    <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a href="home.html"><strong>Ripen</strong></a>
+        </li>
+
+        <li class="sidebar-nav-item">
+          <a href="home.html">Home</a>
+        </li>
+
+        <li class="sidebar-nav-item">
+          <a href="aboutus.html">About</a>
+        </li>
+
+        <li class="sidebar-nav-item">
+          <a href="data.html">Data</a>
+        </li>
+
+        <li class="sidebar-nav-item">
+          <a href="ourjourney.html">The Journey</a>
+        </li>
+
+      </ul>
+    </nav>
+    <a id="home"></a>
+ <!-- HERO
+    ================================================== -->
+
+       
+
+        <!-- CARD SETUP -->
+        <div class="align-items-center justify-content-center" style = "padding:2rem;">
+          
+          <!-- CARD NUMBER 0 -->
+              <div class = "mySlides" style = "margin-top: 10%">
+                <div class="container row w-75 bg-light bg-gradient" style = "border-radius: 20px; opacity: 0.95; margin: auto; max-height: 20rem; padding: 325px 0px; padding-top: 120px; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); border-radius: 30px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; ">
+
+              <div class = "col-sm-6 text-center" style = "top:-50px">
+                <h1 class = "display-4 text-center" style = "margin-left: 0px">
+                  Data <b style= "color: green;">Analytics</b>
+                </h1>
+                <h3 class = "display-6 text-left" style = "margin-left: 50px; margin-top: 30px; margin-right: 30px; font-size: 1.2rem">
+                  Use the <b style= "color: green;">arrows</b> on the left and right side of the screen to become acquainted with descriptive statistics about our dataset, an assessment of model quality, and more!
+                </h3>
+              </div>
+                  
+              <div class="col-sm-6 img-container">
+                <img class = "img-fluid" style = "position:relative; top:-30px;  max-width: 85%; max-height: 85%; display: block;" src="{{ url_for('static', filename='images/tractor-pic.png')}}">
+              </div>
+             </div>
+            </div>
+
+              <!-- CARD NUMBER 1 -->
+        <div class = "mySlides" style = "margin-top: 10%">
+                <div class="container row w-75 bg-light bg-gradient" style = "border-radius: 20px; opacity: 0.9; margin: auto; max-height: 20rem; padding: 325px 0px; padding-top: 120px; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); border-radius: 30px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; ">
+                  <div class="col-sm-6 img-container">
+                    <img class = "img-fluid" style = "position:relative; top:-50px; left: 20px; width: 90%" src="{{ url_for('static', filename='images/pie_numpictures.png')}}">
+                  </div>
+                  <div class = "col-sm-6" style = "position:relative; top:10px;">
+                    <h1 class = "display-10 h-class-c my-fade-in" style = "font-size: 1.9rem; margin-left: 0px">
+                      Image Distribution Pie Chart
+                    </h1>
+                    <h4 class = "display-5 mt-4 mr-4" style = "text-indent: 20px; margin-left: -40px">
+                     To the left is a pie chart visualizing the distribution of images. Our team scraped images belonging to each of the shown classes using the serpAPI framework. Some images had to be discarded, like sketches or drawings. This final dataset had 329 total images.
+                    </h4>
+                  </div>
+              </div>
+             </div> 
+          
+          <!-- CARD NUMBER 2 -->
+          <!--    <div class = "mySlides" style = "margin-top: 10%">
+                <div class="container row w-75 bg-light bg-gradient" style = "border-radius: 20px; opacity: 0.9; margin: auto; max-height: 20rem; padding: 325px 0px; padding-top: 120px;  position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%)"; border-radius: 30px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;>
+                  <div class="col-sm-6 img-container">
+                    <img class = "img-fluid" style = "position:relative; top:-50px; left: 20px; width: 90%" src="{{ url_for('static', filename='images/pie_numinstances.png')}}">
+                  </div>
+                  <div class = "col-sm-6" style = "position:relative; top:-55px;">
+                    <h1 class = "display-4 h-class-c" style = "font-size: 1.9rem">
+                      Instance Distribution Pie Chart
+                    </h1>
+                    <h4 class = "display-5 mt-4 mr-4" style = "text-indent: 50px">
+                     Some images had multiple instances of the same fruit. For example, some blueberry images contained dozens of blueberry instances! This serendipitous data helped our object recognition model, giving it more context to work with.
+                    </h4>
+                  </div>
+              </div>
+             </div> -->
+          
+           <!-- CARD NUMBER 3 - instances distribution -->
+              <div class = "mySlides" style = "margin-top: 10%">
+                <div class="container row w-75 bg-light bg-gradient" style = "border-radius: 20px; opacity: 20.9; margin: auto; max-height: 20rem; padding: 325px 0px; padding-top: 120px;  position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); border-radius: 30px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+                  <div class="col-sm-6 img-container">
+                    <img class = "img-fluid" style = "position:relative; top:-108px; left: 20px; width: 80%" src="{{ url_for('static', filename='images1/totinstances.png')}}">
+                  </div>
+                  <div class = "col-sm-6" style = "position:relative; top:10px;">
+                    <h1 class = "display-10 h-class-c text-center" style = "font-size: 1.9rem; margin-left: -150px">
+                      Instances Distibution
+                    </h1>
+                    <h4 class = "display-5 mt-4 mr-4" style = "text-indent: 20px; margin-left:-85px">
+                     Some images had multiple instances of the same fruit. For example, some blueberry images contained dozens of blueberry instances! This serendipitous data helped our object recognition model, giving it more context to work with.
+                    </h4>
+                  </div>
+              </div>
+             </div>
+     
+          <!-- CARD NUMBER 4 - confusion matrix -->
+              <div class = "mySlides" style = "margin-top: 10%">
+                <div class="container row w-75 bg-light bg-gradient" style = "border-radius: 20px; opacity: 20.9; margin: auto; max-height: 20rem; padding: 325px 0px; padding-top: 120px;  position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); border-radius: 30px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+                  <div class="col-sm-6 img-container">
+                    <img class = "img-fluid" style = "position:relative; top:-102px; left: 20px; width: 95%" src="{{ url_for('static', filename='images1/confusionmatrix.png')}}">
+                  </div>
+                  <div class = "col-sm-6" style = "position:relative; top:5px;">
+                    <h1 class = "display-10 h-class-c" style = "font-size: 1.9rem; margin-left:125px">
+                      Confusion Matrix
+                    </h1>
+                    <h4 class = "display-5 mt-4 mr-4" style = "text-indent: 20px">
+                    This table shows the model's performance. Fripen identifies unripe apples and ripe blueberries best but is a little weak in identifying ripe and unripe bananas. This co-relates to the instances distribution chart. The higher the instances of a fruit are, the better the model performs with that fruit.
+                    </h4>
+                  </div>
+              </div>
+             </div>
+          
+          
+          
+            <!-- CARD NUMBER 5 - precision line graph -->
+              <div class = "mySlides" style = "margin-top: 10%">
+                <div class="container row w-75 bg-light bg-gradient" style = "border-radius: 20px; opacity: 20.9; margin: auto; max-height: 20rem; padding: 325px 0px; padding-top: 120px;  position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); border-radius: 30px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+                  <div class="col-sm-6 img-container">
+                    <img class = "img-fluid" style = "position:relative; top:-80px; left: 10px; width: 105%" src="{{ url_for('static', filename='images1/metrics-precision.png')}}">
+                  </div>
+                  <div class = "col-sm-6" style = "position:relative; top:-7px;">
+                    <h1 class = "display-10 h-class-c" style = "font-size: 1.9rem; margin-left:92px">
+                      Precision Line Graph
+                    </h1>
+                    <h4 class = "display-5 mt-4 mr-4" style = "text-indent: 20px">
+                    This line graph represents the number of correct positive predictions made out of all positive predictions that could have been made, during each epoch. The best results occurred at epoch 410 and since the model performance didn't improve in the next 100 epochs, it early-stopped at epoch 510
+                    </h4>
+                  </div>
+              </div>
+             </div>
+          
+          
+          
+         <!-- CARD NUMBER 6 - precision line graph -->
+              <div class = "mySlides" style = "margin-top: 10%">
+                <div class="container row w-75 bg-light bg-gradient" style = "border-radius: 20px; opacity: 20.9; margin: auto; max-height: 20rem; padding: 325px 0px; padding-top: 120px;  position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); border-radius: 30px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+                  <div class="col-sm-6 img-container">
+                    <img class = "img-fluid" style = "position:relative; top:-80px; left: 10px; width: 105%" src="{{ url_for('static', filename='images1/metrics-recall.png')}}">
+                  </div>
+                  <div class = "col-sm-6" style = "position:relative; top:-7px;">
+                    <h1 class = "display-10 h-class-c" style = "font-size: 1.9rem; margin-left:92px">
+                      Recall Line Graph
+                    </h1>
+                    <h4 class = "display-5 mt-4 mr-4" style = "text-indent: 20px">
+                    This line graph represents how the number of false negatives were reduced as the number of epochs increased. When compared to the precision it can be inferred that the model was able to reduce false positives better that false negatives.
+                     
+                    </h4>
+                  </div>
+              </div>
+             </div>
+          
+          
+          
+          
+         
+          
+          <!-- CARD NUMBER 7 - predictions  -->
+              <div class = "mySlides" style = "margin-top: 10%">
+                <div class="container row w-75 bg-light bg-gradient" style = "border-radius: 20px; opacity: 20.9; margin: auto; max-height: 20rem; padding: 325px 0px; padding-top: 120px;  position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); border-radius: 30px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+                  <div class="col-sm-6 img-container">
+                    <img class = "img-fluid" style = "position:relative; top:-103px; left: 10px; width: 80%" src="{{ url_for('static', filename='images1/predictions.png')}}">
+                  </div>
+                  <div class = "col-sm-6" style = "position:relative; top:-7px;">
+                    <h1 class = "display-10 h-class-c" style = "font-size: 1.9rem; margin-left:102px">
+                      Predictions
+                    </h1>
+                    <h4 class = "display-5 mt-4 mr-4" style = "text-indent: 20px; margin-left:-82px">
+                    This image shows our model labeling images as what it thinks they are. The decimal above shows how confident it is with the prediction. 1 being 100% confident and 0.01 being 1% confident. 
+                     
+                    </h4>
+                  </div>
+              </div>
+             </div>
+          
+          
+          
+          <!-- CARD NUMBER 8 - confidence vs. precision -->
+              <div class = "mySlides" style = "margin-top: 10%">
+                <div class="container row w-75 bg-light bg-gradient" style = "border-radius: 20px; opacity: 20.9; margin: auto; max-height: 20rem; padding: 325px 0px; padding-top: 120px;  position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); border-radius: 30px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+                  <div class="col-sm-6 img-container">
+                    <img class = "img-fluid" style = "position:relative; top:-70px; left: 10px; width: 120%" src="{{ url_for('static', filename='images1/confidence-precision.png')}}">
+                  </div>
+                  <div class = "col-sm-6" style = "position:relative; top:-7px;">
+                    <h1 class = "display-10 h-class-c" style = "font-size: 1.9rem; margin-left:92px">
+                      Confidence vs. Precision
+                    </h1>
+                    <h4 class = "display-5 mt-4 mr-4" style = "text-indent: 20px">
+                    This chart compares the confidence of our model with the precision. Overall, when all the classes achieve a precision of 1, the confidence becomes a 0.976. However there are minor differences in these numbers as you analyze different classes. 
+                     
+                    </h4>
+                  </div>
+              </div>
+             </div>
+          
+          
+          
+          <!-- CARD NUMBER 9 - confidence vs. recall  -->
+              <div class = "mySlides" style = "margin-top: 10%">
+                <div class="container row w-75 bg-light bg-gradient" style = "border-radius: 20px; opacity: 20.9; margin: auto; max-height: 20rem; padding: 325px 0px; padding-top: 120px;  position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); border-radius: 30px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+                  <div class="col-sm-6 img-container">
+                    <img class = "img-fluid" style = "position:relative; top:-70px; left: 10px; width: 120%" src="{{ url_for('static', filename='images1/confidence-recall.png')}}">
+                  </div>
+                  <div class = "col-sm-6" style = "position:relative; top:-7px;">
+                    <h1 class = "display-10 h-class-c" style = "font-size: 1.9rem; margin-left:92px">
+                      Confidence vs. Recall
+                    </h1>
+                    <h4 class = "display-5 mt-4 mr-4" style = "text-indent: 20px">
+                    This chart compares the confidence of our model with the recall. The best recall was achieved when the confidence was 0. So, it is important to find a good balance where both of these values are somewhat good. In this chart that would be when both the recall and confidence are around 0.7.
+                     
+                    </h4>
+                  </div>
+              </div>
+             </div>
+          
+          
+          
+          
+          <!-- CARD NUMBER 10 - precision vs. recall  -->
+              <div class = "mySlides" style = "margin-top: 10%">
+                <div class="container row w-75 bg-light bg-gradient" style = "border-radius: 20px; opacity: 20.9; margin: auto; max-height: 20rem; padding: 325px 0px; padding-top: 120px;  position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); border-radius: 30px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+                  <div class="col-sm-6 img-container">
+                    <img class = "img-fluid" style = "position:relative; top:-70px; left: 10px; width: 120%" src="{{ url_for('static', filename='images1/precision-recall.png')}}">
+                  </div>
+                  <div class = "col-sm-6" style = "position:relative; top:-30px;">
+                    <h1 class = "display-10 h-class-c" style = "font-size: 1.9rem; margin-left:92px">
+                      Precision vs. Recall
+                    </h1>
+                    <h4 class = "display-5 mt-4 mr-4" style = "text-indent: 20px">
+                    This chart compares the precision of our model with the recall. Precision and Recall are two values that are like opposites. If one is high then the other is low and vice-versa. Hence, the key is to find the perfect balance between these two as sometimes the main reason behind a model not performing well is not having good precision o recall. in our case the perfect balance between these two occurs when both of them are at 0.7.
+                    </h4>
+                  </div>
+              </div>
+             </div>
+          
+          
+          
+          <!-- CARD NUMBER 11 - F1-->
+              <div class = "mySlides" style = "margin-top: 10%">
+                <div class="container row w-75 bg-light bg-gradient" style = "border-radius: 20px; opacity: 20.9; margin: auto; max-height: 20rem; padding: 325px 0px; padding-top: 120px;  position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); border-radius: 30px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+                  <div class="col-sm-6 img-container">
+                    <img class = "img-fluid" style = "position:relative; top:-70px; left: 10px; width: 120%" src="{{ url_for('static', filename='images1/F1.png')}}">
+                  </div>
+                  <div class = "col-sm-6" style = "position:relative; top:0px;">
+                    <h1 class = "display-10 h-class-c" style = "font-size: 1.9rem; margin-left:112px">
+                      F1 vs. Confidence
+                    </h1>
+                    <h4 class = "display-5 mt-4 mr-4" style = "text-indent: 20px">
+                    F1 is a value that is the weighted mean of precision and recall. This chart shows us that the optimal F1 score is 0.78 and is achieved when the confidence is at 0.541
+                    </h4>
+                  </div>
+              </div>
+             </div>
+          
+ 
+          
+        </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!--  Page Scroll to Top  -->
+
+    <a class="scroll-to-top" href="#top-header">
+        <i class="fa fa-angle-up"></i>
+    </a>
+
+
+    <!-- 
+    Essential Scripts
+    =====================================-->
+    <!-- Main jQuery -->
+    <script src="{{ url_for('static', filename='plugins/jquery/jquery.min.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/theme.js')}}"></script>
+  <script>
+    document.body.addEventListener('keydown', function(event)
+                                       {
+            const key = event.key;
+            switch (key) {
+                case "ArrowLeft":
+                    plusSlides(-1);
+                    break;
+                case "ArrowRight":
+                    plusSlides(1);
+                    break;
+            }
+        });
+    
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "flex";
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
+      <script src="js/scripts.js"></script> 
+    <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
+  </body>
+  </html>

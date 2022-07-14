@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<!-- saved from url=(0104)https://www.pythonanywhere.com/user/AriChikkere/files/home/AriChikkere/mysite/templates/upload.html?edit -->
+<html lang="en" style="height: 100%">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>upload.html : /home/AriChikkere/mysite/templates/upload.html : Editor : AriChikkere : PythonAnywhere</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="upload.html : /home/AriChikkere/mysite/templates/upload.html : Editor : AriChikkere : PythonAnywhere">
+    <meta name="author" content="PythonAnywhere LLP">
+    <meta name="google-site-verification" content="O4UxDrfcHjC44jybs2vajc1GgRkTKCTRgVzeV6I9V14">
+
+
+    <!-- Le styles -->
+    <link rel="stylesheet"
+          href="./upload.html _ _home_AriChikkere_mysite_templates_upload.html _ Editor _ AriChikkere _ PythonAnywhere_files/css">
+
+    <link rel="stylesheet"
+          href="./upload.html _ _home_AriChikkere_mysite_templates_upload.html _ Editor _ AriChikkere _ PythonAnywhere_files/f438f1304d1c.css"
+          type="text/css" media="screen">
+    <link rel="stylesheet"
+          href="./upload.html _ _home_AriChikkere_mysite_templates_upload.html _ Editor _ AriChikkere _ PythonAnywhere_files/a5c0829f431b.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="./upload.html _ _home_AriChikkere_mysite_templates_upload.html _ Editor _ AriChikkere _ PythonAnywhere_files/641b1e2b264d.css"
+          type="text/css" media="screen">
+
+    <!-- Le javascript -->
+    <script async=""
+            src="./upload.html _ _home_AriChikkere_mysite_templates_upload.html _ Editor _ AriChikkere _ PythonAnywhere_files/analytics.js"></script>
+    <script type="text/javascript">
+        var Anywhere = {};
+        Anywhere.urls = {};
+        Anywhere.csrfToken = "9tzm15E4jeLk6LS1XPPK7p7SJz8i7h9BqrQ2gfDWKuILMduhZssKfDC3R7j9oxfR";
+    </script>
+    <script type="text/javascript"
+            src="./upload.html _ _home_AriChikkere_mysite_templates_upload.html _ Editor _ AriChikkere _ PythonAnywhere_files/efd0f9224b4c.js"></script>
+
+
+    <script type="text/javascript"
+            src="./upload.html _ _home_AriChikkere_mysite_templates_upload.html _ Editor _ AriChikkere _ PythonAnywhere_files/4d5d4f66ed1b.js"></script>
+    <style id="ace_editor.css">.ace_editor {
+        position: relative;
+        overflow: hidden;
+        font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+        direction: ltr;
+    }
+
+    .ace_scroller {
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        bottom: 0;
+        background-color: inherit;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+        cursor: text;
+    }
+
+    .ace_content {
+        position: absolute;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        min-width: 100%;
+    }
+
+    .ace_dragging .ace_scroller:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: '';
+        background: rgba(250, 250, 250, 0.01);
+        z-index: 1000;
+    }
+
+    .ace_dragging.ace_dark .ace_scroller:before {
+        background: rgba(0, 0, 0, 0.01);
+    }
+
+    .ace_selecting, .ace_selecting * {
+        cursor: text !important;
+    }
+
+    .ace_gutter {
+        position: absolute;
+        overflow: hidden;
+        width: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        cursor: default;
+        z-index: 4;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    .ace_gutter-active-line {
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+
+    .ace_scroller.ace_scroll-left {
+        box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;
+    }
+
+    .ace_gutter-cell {
+        padding-left: 19px;
+        padding-right: 6px;
+        background-repeat: no-repeat;
+    }
+
+    .ace_gutter-cell.ace_error {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");
+        background-repeat: no-repeat;
+        background-position: 2px center;
+    }
+
+    .ace_gutter-cell.ace_warning {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");
+        background-position: 2px center;
+    }
+
+    .ace_gutter-cell.ace_info {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");
+        background-position: 2px center;
+    }
+
+    .ace_dark .ace_gutter-cell.ace_info {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");
+    }
+
+    .ace_scrollbar {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 6;
+    }
+
+    .ace_scrollbar-inner {
+        position: absolute;
+        cursor: text;
+        left: 0;
+        top: 0;
+    }
+
+    .ace_scrollbar-v {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        top: 0;
+    }
+
+    .ace_scrollbar-h {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        left: 0;
+    }
+
+    .ace_print-margin {
+        position: absolute;
+        height: 100%;
+    }
+
+    .ace_text-input {
+        position: absolute;
+        z-index: 0;
+        width: 0.5em;
+        height: 1em;
+        opacity: 0;
+        background: transparent;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        resize: none;
+        outline: none;
+        overflow: hidden;
+        font: inherit;
+        padding: 0 1px;
+        margin: 0 -1px;
+        text-indent: -1em;
+        -ms-user-select: text;
+        -moz-user-select: text;
+        -webkit-user-select: text;
+        user-select: text;
+        white-space: pre !important;
+    }
+
+    .ace_text-input.ace_composition {
+        background: inherit;
+        color: inherit;
+        z-index: 1000;
+        opacity: 1;
+        text-indent: 0;
+    }
+
+    .ace_layer {
+        z-index: 1;
+        position: absolute;
+        overflow: hidden;
+        word-wrap: normal;
+        white-space: pre;
+        height: 100%;
+        width: 100%;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        pointer-events: none;
+    }
+
+    .ace_gutter-layer {
+        position: relative;
+        width: auto;
+        text-align: right;
+        pointer-events: auto;
+    }
+
+    .ace_text-layer {
+        font: inherit !important;
+    }
+
+    .ace_cjk {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .ace_cursor-layer {
+        z-index: 4;
+    }
+
+    .ace_cursor {
+        z-index: 4;
+        position: absolute;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-left: 2px solid;
+        transform: translatez(0);
+    }
+
+    .ace_slim-cursors .ace_cursor {
+        border-left-width: 1px;
+    }
+
+    .ace_overwrite-cursors .ace_cursor {
+        border-left-width: 0;
+        border-bottom: 1px solid;
+    }
+
+    .ace_hidden-cursors .ace_cursor {
+        opacity: 0.2;
+    }
+
+    .ace_smooth-blinking .ace_cursor {
+        -webkit-transition: opacity 0.18s;
+        transition: opacity 0.18s;
+    }
+
+    .ace_editor.ace_multiselect .ace_cursor {
+        border-left-width: 1px;
+    }
+
+    .ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {
+        position: absolute;
+        z-index: 3;
+    }
+
+    .ace_marker-layer .ace_selection {
+        position: absolute;
+        z-index: 5;
+    }
+
+    .ace_marker-layer .ace_bracket {
+        position: absolute;
+        z-index: 6;
+    }
+
+    .ace_marker-layer .ace_active-line {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .ace_marker-layer .ace_selected-word {
+        position: absolute;
+        z-index: 4;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .ace_line .ace_fold {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        display: inline-block;
+        height: 11px;
+        margin-top: -2px;
+        vertical-align: middle;
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="), url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");
+        background-repeat: no-repeat, repeat-x;
+        background-position: center center, top left;
+        color: transparent;
+        border: 1px solid black;
+        border-radius: 2px;
+        cursor: pointer;
+        pointer-events: auto;
+    }
+
+    .ace_dark .ace_fold {
+    }
+
+    .ace_fold:hover {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="), url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");
+    }
+
+    .ace_tooltip {
+        background-color: #FFF;
+        background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));
+        background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));
+        border: 1px solid gray;
+        border-radius: 1px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        color: black;
+        max-width: 100%;
+        padding: 3px 4px;
+        position: fixed;
+        z-index: 999999;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        cursor: default;
+        white-space: pre;
+        word-wrap: break-word;
+        line-height: normal;
+        font-style: normal;
+        font-weight: normal;
+        letter-spacing: normal;
+        pointer-events: none;
+    }
+
+    .ace_folding-enabled > .ace_gutter-cell {
+        padding-right: 13px;
+    }
+
+    .ace_fold-widget {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0 -12px 0 1px;
+        display: none;
+        width: 11px;
+        vertical-align: top;
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 3px;
+        border: 1px solid transparent;
+        cursor: pointer;
+    }
+
+    .ace_folding-enabled .ace_fold-widget {
+        display: inline-block;
+    }
+
+    .ace_fold-widget.ace_end {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");
+    }
+
+    .ace_fold-widget.ace_closed {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");
+    }
+
+    .ace_fold-widget:hover {
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+    }
+
+    .ace_fold-widget:active {
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.05);
+        box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+    }
+
+    .ace_dark .ace_fold-widget {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");
+    }
+
+    .ace_dark .ace_fold-widget.ace_end {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");
+    }
+
+    .ace_dark .ace_fold-widget.ace_closed {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");
+    }
+
+    .ace_dark .ace_fold-widget:hover {
+        box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .ace_dark .ace_fold-widget:active {
+        box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
+    }
+
+    .ace_fold-widget.ace_invalid {
+        background-color: #FFB4B4;
+        border-color: #DE5555;
+    }
+
+    .ace_fade-fold-widgets .ace_fold-widget {
+        -webkit-transition: opacity 0.4s ease 0.05s;
+        transition: opacity 0.4s ease 0.05s;
+        opacity: 0;
+    }
+
+    .ace_fade-fold-widgets:hover .ace_fold-widget {
+        -webkit-transition: opacity 0.05s ease 0.05s;
+        transition: opacity 0.05s ease 0.05s;
+        opacity: 1;
+    }
+
+    .ace_underline {
+        text-decoration: underline;
+    }
+
+    .ace_bold {
+        font-weight: bold;
+    }
+
+    .ace_nobold .ace_bold {
+        font-weight: normal;
+    }
+
+    .ace_italic {
+        font-style: italic;
+    }
+
+    .ace_error-marker {
+        background-color: rgba(255, 0, 0, 0.2);
+        position: absolute;
+        z-index: 9;
+    }
+
+    .ace_highlight-marker {
+        background-color: rgba(255, 255, 0, 0.2);
+        position: absolute;
+        z-index: 8;
+    }
+
+    .ace_br1 {
+        border-top-left-radius: 3px;
+    }
+
+    .ace_br2 {
+        border-top-right-radius: 3px;
+    }
+
+    .ace_br3 {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+
+    .ace_br4 {
+        border-bottom-right-radius: 3px;
+    }
+
+    .ace_br5 {
+        border-top-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+
+    .ace_br6 {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+
+    .ace_br7 {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+
+    .ace_br8 {
+        border-bottom-left-radius: 3px;
+    }
+
+    .ace_br9 {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+
+    .ace_br10 {
+        border-top-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+
+    .ace_br11 {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+
+    .ace_br12 {
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+
+    .ace_br13 {
+        border-top-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+
+    .ace_br14 {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+
+    .ace_br15 {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+
+    /*# sourceURL=ace/css/ace_editor.css */</style>
+    <style id="ace-tm">.ace-tm .ace_gutter {
+        background: #f0f0f0;
+        color: #333;
+    }
+
+    .ace-tm .ace_print-margin {
+        width: 1px;
+        background: #e8e8e8;
+    }
+
+    .ace-tm .ace_fold {
+        background-color: #6B72E6;
+    }
+
+    .ace-tm {
+        background-color: #FFFFFF;
+        color: black;
+    }
+
+    .ace-tm .ace_cursor {
+        color: black;
+    }
+
+    .ace-tm .ace_invisible {
+        color: rgb(191, 191, 191);
+    }
+
+    .ace-tm .ace_storage, .ace-tm .ace_keyword {
+        color: blue;
+    }
+
+    .ace-tm .ace_constant {
+        color: rgb(197, 6, 11);
+    }
+
+    .ace-tm .ace_constant.ace_buildin {
+        color: rgb(88, 72, 246);
+    }
+
+    .ace-tm .ace_constant.ace_language {
+        color: rgb(88, 92, 246);
+    }
+
+    .ace-tm .ace_constant.ace_library {
+        color: rgb(6, 150, 14);
+    }
+
+    .ace-tm .ace_invalid {
+        background-color: rgba(255, 0, 0, 0.1);
+        color: red;
+    }
+
+    .ace-tm .ace_support.ace_function {
+        color: rgb(60, 76, 114);
+    }
+
+    .ace-tm .ace_support.ace_constant {
+        color: rgb(6, 150, 14);
+    }
+
+    .ace-tm .ace_support.ace_type, .ace-tm .ace_support.ace_class {
+        color: rgb(109, 121, 222);
+    }
+
+    .ace-tm .ace_keyword.ace_operator {
+        color: rgb(104, 118, 135);
+    }
+
+    .ace-tm .ace_string {
+        color: rgb(3, 106, 7);
+    }
+
+    .ace-tm .ace_comment {
+        color: rgb(76, 136, 107);
+    }
+
+    .ace-tm .ace_comment.ace_doc {
+        color: rgb(0, 102, 255);
+    }
+
+    .ace-tm .ace_comment.ace_doc.ace_tag {
+        color: rgb(128, 159, 191);
+    }
+
+    .ace-tm .ace_constant.ace_numeric {
+        color: rgb(0, 0, 205);
+    }
+
+    .ace-tm .ace_variable {
+        color: rgb(49, 132, 149);
+    }
+
+    .ace-tm .ace_xml-pe {
+        color: rgb(104, 104, 91);
+    }
+
+    .ace-tm .ace_entity.ace_name.ace_function {
+        color: #0000A2;
+    }
+
+    .ace-tm .ace_heading {
+        color: rgb(12, 7, 255);
+    }
+
+    .ace-tm .ace_list {
+        color: rgb(185, 6, 144);
+    }
+
+    .ace-tm .ace_meta.ace_tag {
+        color: rgb(0, 22, 142);
+    }
+
+    .ace-tm .ace_string.ace_regex {
+        color: rgb(255, 0, 0)
+    }
+
+    .ace-tm .ace_marker-layer .ace_selection {
+        background: rgb(181, 213, 255);
+    }
+
+    .ace-tm.ace_multiselect .ace_selection.ace_start {
+        box-shadow: 0 0 3px 0px white;
+    }
+
+    .ace-tm .ace_marker-layer .ace_step {
+        background: rgb(252, 255, 0);
+    }
+
+    .ace-tm .ace_marker-layer .ace_stack {
+        background: rgb(164, 229, 101);
+    }
+
+    .ace-tm .ace_marker-layer .ace_bracket {
+        margin: -1px 0 0 -1px;
+        border: 1px solid rgb(192, 192, 192);
+    }
+
+    .ace-tm .ace_marker-layer .ace_active-line {
+        background: rgba(0, 0, 0, 0.07);
+    }
+
+    .ace-tm .ace_gutter-active-line {
+        background-color: #dcdcdc;
+    }
+
+    .ace-tm .ace_marker-layer .ace_selected-word {
+        background: rgb(250, 250, 255);
+        border: 1px solid rgb(200, 200, 250);
+    }
+
+    .ace-tm .ace_indent-guide {
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;
+    }
+
+    /*# sourceURL=ace/css/ace-tm */</style>
+    <style>    .error_widget_wrapper {
+        background: inherit;
+        color: inherit;
+        border: none
+    }
+
+    .error_widget {
+        border-top: solid 2px;
+        border-bottom: solid 2px;
+        margin: 5px 0;
+        padding: 10px 40px;
+        white-space: pre-wrap;
+    }
+
+    .error_widget.ace_error, .error_widget_arrow.ace_error {
+        border-color: #ff5a5a
+    }
+
+    .error_widget.ace_warning, .error_widget_arrow.ace_warning {
+        border-color: #F1D817
+    }
+
+    .error_widget.ace_info, .error_widget_arrow.ace_info {
+        border-color: #5a5a5a
+    }
+
+    .error_widget.ace_ok, .error_widget_arrow.ace_ok {
+        border-color: #5aaa5a
+    }
+
+    .error_widget_arrow {
+        position: absolute;
+        border: solid 5px;
+        border-top-color: transparent !important;
+        border-right-color: transparent !important;
+        border-left-color: transparent !important;
+        top: -5px;
+    }</style>
+    <style>.ace_snippet-marker {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background: rgba(194, 193, 208, 0.09);
+        border: 1px dotted rgba(211, 208, 235, 0.62);
+        position: absolute;
+    }</style>
+    <style>.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {
+        background-color: #CAD6FA;
+        z-index: 1;
+    }
+
+    .ace_editor.ace_autocomplete .ace_line-hover {
+        border: 1px solid #abbffe;
+        margin-top: -1px;
+        background: rgba(233, 233, 253, 0.4);
+    }
+
+    .ace_editor.ace_autocomplete .ace_line-hover {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .ace_editor.ace_autocomplete .ace_scroller {
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .ace_rightAlignedText {
+        color: gray;
+        display: inline-block;
+        position: absolute;
+        right: 4px;
+        text-align: right;
+        z-index: -1;
+    }
+
+    .ace_editor.ace_autocomplete .ace_completion-highlight {
+        color: #000;
+        text-shadow: 0 0 0.01em;
+    }
+
+    .ace_editor.ace_autocomplete {
+        width: 280px;
+        z-index: 200000;
+        background: #fbfbfb;
+        color: #444;
+        border: 1px lightgray solid;
+        position: fixed;
+        box-shadow: 2px 3px 5px rgba(0, 0, 0, .2);
+        line-height: 1.4;
+    }</style>
+    <style id="ace_searchbox">.ace_search {
+        background-color: #ddd;
+        border: 1px solid #cbcbcb;
+        border-top: 0 none;
+        max-width: 325px;
+        overflow: hidden;
+        margin: 0;
+        padding: 4px;
+        padding-right: 6px;
+        padding-bottom: 0;
+        position: absolute;
+        top: 0px;
+        z-index: 99;
+        white-space: normal;
+    }
+
+    .ace_search.left {
+        border-left: 0 none;
+        border-radius: 0px 0px 5px 0px;
+        left: 0;
+    }
+
+    .ace_search.right {
+        border-radius: 0px 0px 0px 5px;
+        border-right: 0 none;
+        right: 0;
+    }
+
+    .ace_search_form, .ace_replace_form {
+        border-radius: 3px;
+        border: 1px solid #cbcbcb;
+        float: left;
+        margin-bottom: 4px;
+        overflow: hidden;
+    }
+
+    .ace_search_form.ace_nomatch {
+        outline: 1px solid red;
+    }
+
+    .ace_search_field {
+        background-color: white;
+        border-right: 1px solid #cbcbcb;
+        border: 0 none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+        height: 22px;
+        outline: 0;
+        padding: 0 7px;
+        width: 214px;
+        margin: 0;
+    }
+
+    .ace_searchbtn, .ace_replacebtn {
+        background: #fff;
+        border: 0 none;
+        border-left: 1px solid #dcdcdc;
+        cursor: pointer;
+        float: left;
+        height: 22px;
+        margin: 0;
+        position: relative;
+    }
+
+    .ace_searchbtn:last-child, .ace_replacebtn:last-child {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+
+    .ace_searchbtn:disabled {
+        background: none;
+        cursor: default;
+    }
+
+    .ace_searchbtn {
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        width: 27px;
+    }
+
+    .ace_searchbtn.prev {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADFJREFUeNpiSU1NZUAC/6E0I0yACYskCpsJiySKIiY0SUZk40FyTEgCjGgKwTRAgAEAQJUIPCE+qfkAAAAASUVORK5CYII=);
+    }
+
+    .ace_searchbtn.next {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADRJREFUeNpiTE1NZQCC/0DMyIAKwGJMUAYDEo3M/s+EpvM/mkKwCQxYjIeLMaELoLMBAgwAU7UJObTKsvAAAAAASUVORK5CYII=);
+    }
+
+    .ace_searchbtn_close {
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABRVo5BAAAAZ0lEQVR42u2SUQrAMAhDvazn8OjZBilCkYVVxiis8H4CT0VrAJb4WHT3C5xU2a2IQZXJjiQIRMdkEoJ5Q2yMqpfDIo+XY4k6h+YXOyKqTIj5REaxloNAd0xiKmAtsTHqW8sR2W5f7gCu5nWFUpVjZwAAAABJRU5ErkJggg==) no-repeat 50% 0;
+        border-radius: 50%;
+        border: 0 none;
+        color: #656565;
+        cursor: pointer;
+        float: right;
+        font: 16px/16px Arial;
+        height: 14px;
+        margin: 5px 1px 9px 5px;
+        padding: 0;
+        text-align: center;
+        width: 14px;
+    }
+
+    .ace_searchbtn_close:hover {
+        background-color: #656565;
+        background-position: 50% 100%;
+        color: white;
+    }
+
+    .ace_replacebtn.prev {
+        width: 54px
+    }
+
+    .ace_replacebtn.next {
+        width: 27px
+    }
+
+    .ace_button {
+        margin-left: 2px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        overflow: hidden;
+        opacity: 0.7;
+        border: 1px solid rgba(100, 100, 100, 0.23);
+        padding: 1px;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        color: black;
+    }
+
+    .ace_button:hover {
+        background-color: #eee;
+        opacity: 1;
+    }
+
+    .ace_button:active {
+        background-color: #ddd;
+    }
+
+    .ace_button.checked {
+        border-color: #3399ff;
+        opacity: 1;
+    }
+
+    .ace_search_options {
+        margin-bottom: 3px;
+        text-align: right;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    /*# sourceURL=ace/css/ace_searchbox */</style>
+    <style>#ace_settingsmenu, #kbshortcutmenu {
+        background-color: #F7F7F7;
+        color: black;
+        box-shadow: -5px 4px 5px rgba(126, 126, 126, 0.55);
+        padding: 1em 0.5em 2em 1em;
+        overflow: auto;
+        position: absolute;
+        margin: 0;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        z-index: 9991;
+        cursor: default;
+    }
+
+    .ace_dark #ace_settingsmenu, .ace_dark #kbshortcutmenu {
+        box-shadow: -20px 10px 25px rgba(126, 126, 126, 0.25);
+        background-color: rgba(255, 255, 255, 0.6);
+        color: black;
+    }
+
+    .ace_optionsMenuEntry:hover {
+        background-color: rgba(100, 100, 100, 0.1);
+        -webkit-transition: all 0.5s;
+        transition: all 0.3s
+    }
+
+    .ace_closeButton {
+        background: rgba(245, 146, 146, 0.5);
+        border: 1px solid #F48A8A;
+        border-radius: 50%;
+        padding: 7px;
+        position: absolute;
+        right: -8px;
+        top: -8px;
+        z-index: 1000;
+    }
+
+    .ace_closeButton {
+        background: rgba(245, 146, 146, 0.9);
+    }
+
+    .ace_optionsMenuKey {
+        color: darkslateblue;
+        font-weight: bold;
+    }
+
+    .ace_optionsMenuCommand {
+        color: darkcyan;
+        font-weight: normal;
+    }</style>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.extend(Anywhere.urls, {
+                file: "/user/AriChikkere/files/home/AriChikkere/mysite/templates/upload.html",
+                check_hash: "/user/AriChikkere/files/home/AriChikkere/mysite/templates/upload.html",
+                update_editor_mode_preference: "/user/AriChikkere/account/update_editor_mode_preference",
+                console_api: "/api/v0/user/AriChikkere/consoles/",
+            });
+            var filename = "/home/AriChikkere/mysite/templates/upload.html";
+            var hash = "621fe64f3cf39cd4de1c801197c5f980";
+            var interpreter = "None";
+
+
+            Anywhere.Editor.InitializeAce(ace, Anywhere.urls, filename, hash, interpreter, "pythonanywhere.com");
+            $("#id_keybinding_mode_select").val("normal");
+            $("#id_keybinding_mode_select").trigger("change");
+
+            var consoleVisible = false;
+            Anywhere.Editor.splitPanes(consoleVisible);
+
+            Anywhere.WebAppControl.initialize();
+            Anywhere2.initializeFileSharingOptions(
+                $('#id_file_sharing_options')[0],
+                {
+                    url: "/api/v0/user/AriChikkere/files/sharing/",
+                    csrfToken: "9tzm15E4jeLk6LS1XPPK7p7SJz8i7h9BqrQ2gfDWKuILMduhZssKfDC3R7j9oxfR",
+                    path: "/home/AriChikkere/mysite/templates/upload.html"
+                }
+            );
+
+        });
+    </script>
+
+
+    <style id="vimMode">.normal-mode .ace_cursor {
+        border: 1px solid red;
+        background-color: red;
+        opacity: 0.5;
+    }
+
+    .normal-mode .ace_hidden-cursors .ace_cursor {
+        background-color: transparent;
+    }
+
+    .ace_dialog {
+        position: absolute;
+        left: 0;
+        right: 0;
+        background: white;
+        z-index: 15;
+        padding: .1em .8em;
+        overflow: hidden;
+        color: #333;
+    }
+
+    .ace_dialog-top {
+        border-bottom: 1px solid #eee;
+        top: 0;
+    }
+
+    .ace_dialog-bottom {
+        border-top: 1px solid #eee;
+        bottom: 0;
+    }
+
+    .ace_dialog input {
+        border: none;
+        outline: none;
+        background: transparent;
+        width: 20em;
+        color: inherit;
+        font-family: monospace;
+    }
+
+    /*# sourceURL=ace/css/vimMode */</style>
+</head>
+
+<body style="height:100%;">
+<div style="min-height: 100%; position: relative;">
+
+
+    <nav class="navbar navbar-default fullscreen-main-navbar">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="https://www.pythonanywhere.com/">
+                <img id="id_logo"
+                     src="./upload.html _ _home_AriChikkere_mysite_templates_upload.html _ Editor _ AriChikkere _ PythonAnywhere_files/PA-logo-snake-only.svg"
+                     height="100%">
+            </a>
+        </div>
+
+        <div class="extra-nav-content">
+
+
+            <div id="id_editor_toolbar">
+
+                <div class="pull-left">
+                    <span id="id_breadcrumbs_div"><a class="breadcrumbs_link breadcrumb_entry"
+                                                     href="https://www.pythonanywhere.com/user/AriChikkere/files/">/</a><a
+                            class="breadcrumbs_link breadcrumb_entry"
+                            href="https://www.pythonanywhere.com/user/AriChikkere/files/home">home</a><span
+                            class="breadcrumb_entry">/</span><a class="breadcrumbs_link breadcrumb_entry"
+                                                                href="https://www.pythonanywhere.com/user/AriChikkere/files/home/AriChikkere">AriChikkere</a><span
+                            class="breadcrumb_entry">/</span><a class="breadcrumbs_link breadcrumb_entry"
+                                                                href="https://www.pythonanywhere.com/user/AriChikkere/files/home/AriChikkere/mysite">mysite</a><span
+                            class="breadcrumb_entry">/</span><a class="breadcrumbs_link breadcrumb_entry"
+                                                                href="https://www.pythonanywhere.com/user/AriChikkere/files/home/AriChikkere/mysite/templates">templates</a><span
+                            class="breadcrumb_entry">/</span><wbr><span class="breadcrumb_entry breadcrumb_terminal">upload.html</span></span>
+
+                    <span>
+        <span id="id_unsaved_changes_spacer">
+          <span id="id_unsaved_changes" class="pa_hidden muted">(unsaved changes)</span>
+        </span>
+      </span>
+                </div>
+
+                <div id="id_editor_messages" class="pull-left">
+
+
+                </div>
+
+                <div class="pull-right">
+                    <div id="id_editor_buttons_right" class="form-inline">
+                        <span id="id_save_error" class="pa_hidden alert alert-danger">Error saving.</span>
+                        <img src="./upload.html _ _home_AriChikkere_mysite_templates_upload.html _ Editor _ AriChikkere _ PythonAnywhere_files/spinner-small.gif"
+                             class="pa_hidden" id="id_save_spinner">
+
+                        <span id="id_keyboard_shortcuts"><a
+                                href="https://www.pythonanywhere.com/user/AriChikkere/files/home/AriChikkere/mysite/templates/upload.html?edit#">Keyboard shortcuts:</a></span>
+                        <select id="id_keybinding_mode_select" class="form-control input-sm">
+                            <option value="normal">Normal</option>
+                            <option value="vim">Vim</option>
+                        </select>
+
+                        <button id="id_display_sharing_options" class="btn btn-default" data-toggle="modal"
+                                data-target="#id_file_sharing_modal" title="Get a URL to share this file">
+                            <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+                            Share
+                        </button>
+
+                        <button id="id_save" class="btn btn-success" title="Save (Ctrl + S)">
+                            <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+                            Save
+                        </button>
+                        <button id="id_save_as" class="btn btn-default" title="Save As">Save as...</button>
+
+
+                        <form class="reload_web_app" style="display: flex" method="POST"
+                              action="https://www.pythonanywhere.com/user/AriChikkere/webapps/AriChikkere.pythonanywhere.com/reload">
+                            <button class="btn btn-default" type="submit" title="Reload AriChikkere.pythonanywhere.com">
+                                <i class="glyphicon glyphicon-refresh"></i>
+                            </button>
+                            <img style="display: none;" class="spinner"
+                                 src="./upload.html _ _home_AriChikkere_mysite_templates_upload.html _ Editor _ AriChikkere _ PythonAnywhere_files/spinner-small.gif">
+                            <div style="display: none; clear: both;"
+                                 class="alert alert-danger error_message generic_error">
+                                There was a problem. If this keeps happening, please <a
+                                    href="https://www.pythonanywhere.com/user/AriChikkere/files/home/AriChikkere/mysite/templates/upload.html?edit"
+                                    class="feedback_link">send us feedback</a>.
+                            </div>
+                            <div style="display: none; clear: both;"
+                                 class="alert alert-danger error_message slow_startup_error">
+                                Your webapp took a long time to reload. It probably reloaded, but we were unable to
+                                check it.
+                            </div>
+                            <div style="display: none; clear: both;"
+                                 class="alert alert-danger error_message virtualenv_error">
+                                There is a problem with your virtualenv setup. Look at the <b>virtualenv</b> section on
+                                the web app tab for details.
+                            </div>
+                            <div style="display: none; clear: both;"
+                                 class="alert alert-danger error_message cname_error">
+                                There is a problem with your DNS configuration. Take a look at the <b>DNS setup</b>
+                                section on the web app tab for details.
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="dropdown fullscreen-hamburger fullscreen-mini-nav">
+            <button type="button" class="navbar-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <ul class="dropdown-menu pull-right">
+
+                <li class=""><a id="id_dashboard_link"
+                                href="https://www.pythonanywhere.com/user/AriChikkere/">Dashboard</a></li>
+                <li class=""><a id="id_consoles_link" href="https://www.pythonanywhere.com/user/AriChikkere/consoles/">Consoles</a>
+                </li>
+                <li class=""><a id="id_files_link"
+                                href="https://www.pythonanywhere.com/user/AriChikkere/files/home/AriChikkere">Files</a>
+                </li>
+                <li class=""><a id="id_web_app_link"
+                                href="https://www.pythonanywhere.com/user/AriChikkere/webapps/">Web</a></li>
+                <li class=""><a id="id_tasks_link" href="https://www.pythonanywhere.com/user/AriChikkere/tasks_tab/">Tasks</a>
+                </li>
+                <li class=""><a id="id_databases_link"
+                                href="https://www.pythonanywhere.com/user/AriChikkere/databases/">Databases</a></li>
+
+
+                <li class=""><a
+                        href="https://www.pythonanywhere.com/user/AriChikkere/files/home/AriChikkere/mysite/templates/upload.html?edit"
+                        class="feedback_link">Send feedback</a></li>
+                <li class=""><a href="https://www.pythonanywhere.com/forums/" class="forums_link">Forums</a></li>
+                <li class=""><a href="https://help.pythonanywhere.com/" class="help_link">Help</a></li>
+                <li class=""><a href="https://blog.pythonanywhere.com/" class="blog_link">Blog</a></li>
+
+
+                <li class=""><a href="https://www.pythonanywhere.com/user/AriChikkere/account/" class="account_link">Account</a>
+                </li>
+                <li class="">
+                    <form action="https://www.pythonanywhere.com/logout/" method="POST">
+                        <input type="hidden" name="csrfmiddlewaretoken"
+                               value="9tzm15E4jeLk6LS1XPPK7p7SJz8i7h9BqrQ2gfDWKuILMduhZssKfDC3R7j9oxfR">
+                        <button type="submit" class="btn-link logout_link">Log out</button>
+                    </form>
+                </li>
+
+
+            </ul>
+        </div>
+
+    </nav>
+
+
+    <div>
+        <div id="id_ide_split_panes" class="splitter ui-widget ui-widget-content" data-splitter-initialized="true"
+             style="height: 621px; position: relative;">
+
+
+            <div id="id_editor" class="ace_editor ace-tm splitter-pane ace_focus"
+                 style="font-size: 11pt; height: 614px; position: absolute; z-index: 1; top: 0px; width: 1362px;">
+                <textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                          style="opacity: 0; height: 20px; width: 8.7975px; left: 55px; top: 0px;"></textarea>
+                <div class="ace_gutter">
+                    <div class="ace_layer ace_gutter-layer ace_folding-enabled"
+                         style="margin-top: 0px; height: 654px; width: 51px;">
+                        <div class="ace_gutter-cell " style="height: 20px;">1</div>
+                        <div class="ace_gutter-cell " style="height: 20px;">2</div>
+                        <div class="ace_gutter-cell " style="height: 20px;">3</div>
+                        <div class="ace_gutter-cell " style="height: 20px;">4<span
+                                class="ace_fold-widget ace_start ace_open" style="height: 20px;"></span></div>
+                        <div class="ace_gutter-cell " style="height: 20px;">5</div>
+                        <div class="ace_gutter-cell " style="height: 20px;">6</div>
+                        <div class="ace_gutter-cell " style="height: 20px;">7<span
+                                class="ace_fold-widget ace_start ace_open" style="height: 20px;"></span></div>
+                        <div class="ace_gutter-cell " style="height: 20px;">8</div>
+                        <div class="ace_gutter-cell " style="height: 20px;">9</div>
+                        <div class="ace_gutter-cell " style="height: 20px;">10</div>
+                        <div class="ace_gutter-cell " style="height: 20px;">11</div>
+                        <div class="ace_gutter-cell " style="height: 20px;">12</div>
+                        <div class="ace_gutter-cell " style="height: 20px;">13</div>
+                        <div class="ace_gutter-cell " style="height: 20px;">14</div>
+                        <div class="ace_gutter-cell " style="height: 20px;">15<span
+                                class="ace_fold-widget ace_start ace_open" style="height: 20px;"></span></div>
+                        <div class="ace_gutter-cell " style="height: 20px;">16<span
+                                class="ace_fold-widget ace_start ace_open" style="height: 20px;"></span></div>
+                        <div class="ace_gutter-cell " style="height: 20px;">17<span
+                                class="ace_fold-widget ace_start ace_open" style="height: 20px;"></span></div>
+                        <div class="ace_gutter-cell " style="height: 20px;">18</div>
+                        <div class="ace_gutter-cell " style="height: 20px;">19</div>
+                        <div class="ace_gutter-cell " style="height: 20px;">20</div>
+                        <div class="ace_gutter-cell " style="height: 20px;">21<span
+                                class="ace_fold-widget ace_start ace_open" style="height: 20px;"></span></div>
+                        <div class="ace_gutter-cell " style="height: 20px;">22</div>
+                        <div class="ace_gutter-cell " style="height: 20px;">23</div>
+                        <div class="ace_gutter-cell " style="height: 20px;">24</div>
+                    </div>
+                    <div class="ace_gutter-active-line" style="top: 0px; height: 20px;"></div>
+                </div>
+                <div class="ace_scroller" style="left: 51px; right: 0px; bottom: 0px;">
+                    <div class="ace_content" style="margin-top: 0px; width: 1311px; height: 654px; margin-left: 0px;">
+                        <div class="ace_layer ace_print-margin-layer">
+                            <div class="ace_print-margin" style="left: 707.8px; visibility: visible;"></div>
+                        </div>
+                        <div class="ace_layer ace_marker-layer">
+                            <div class="ace_active-line" style="height:20px;top:0px;left:0;right:0;"></div>
+                        </div>
+                        <div class="ace_layer ace_text-layer" style="padding: 0px 4px;">
+                            <div class="ace_line" style="height:20px"><span
+                                    class="ace_xml-pe ace_doctype ace_xml">&lt;!</span><span
+                                    class="ace_xml-pe ace_doctype ace_xml">doctype</span><span
+                                    class="ace_text ace_whitespace ace_xml"> </span><span class="ace_xml-pe ace_xml">html</span><span
+                                    class="ace_xml-pe ace_doctype ace_xml">&gt;</span></div>
+                            <div class="ace_line" style="height:20px"><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span
+                                    class="ace_meta ace_tag ace_tag-name ace_xml">title</span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span
+                                    class="ace_text ace_xml">Python Flask Multiple Files Upload Example</span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span
+                                    class="ace_meta ace_tag ace_tag-name ace_xml">title</span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div>
+                            <div class="ace_line" style="height:20px"><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span
+                                    class="ace_meta ace_tag ace_tag-name ace_xml">h2</span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span
+                                    class="ace_text ace_xml">Select file(s) to upload</span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span
+                                    class="ace_meta ace_tag ace_tag-name ace_xml">h2</span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div>
+                            <div class="ace_line" style="height:20px"><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span
+                                    class="ace_meta ace_tag ace_tag-name ace_xml">p</span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div>
+                            <div class="ace_line" style="height:20px"><span
+                                    class="ace_text ace_xml">    {% with messages = get_flashed_messages() %}</span>
+                                </div>
+                                <div class="ace_line" style="height:20px"><span
+                                        class="ace_text ace_xml">      {% if messages %}</span></div>
+                                    <div class="ace_line" style="height:20px"><span class="ace_indent-guide">    </span><span
+                                            class="ace_text ace_xml">    </span><span
+                                            class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span
+                                            class="ace_meta ace_tag ace_tag-name ace_xml">ul</span><span
+                                            class="ace_text ace_tag-whitespace ace_xml"> </span><span
+                                            class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span
+                                            class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span
+                                            class="ace_string ace_unquoted ace_attribute-value ace_html">flashes</span><span
+                                            class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span>
+                                    </div>
+                                    <div class="ace_line" style="height:20px"><span class="ace_indent-guide">    </span><span
+                                            class="ace_text ace_xml">    {% for message in messages %}</span></div>
+                                        <div class="ace_line" style="height:20px"><span
+                                                class="ace_indent-guide">    </span><span
+                                                class="ace_text ace_xml">      </span><span
+                                                class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span
+                                                class="ace_meta ace_tag ace_tag-name ace_xml">li</span><span
+                                                class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span
+                                                class="ace_text ace_xml">{{ message }}</span><span
+                                                class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span
+                                                class="ace_meta ace_tag ace_tag-name ace_xml">li</span><span
+                                                class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span>
+                                        </div>
+                                        <div class="ace_line" style="height:20px">
+                                        <span class="ace_indent-guide">    </span>
+                                        <span class="ace_text ace_xml">    {% endfor %}</span></div>
+                                    <div class="ace_line" style="height:20px"><span class="ace_indent-guide">    </span><span
+                                            class="ace_text ace_xml">    </span><span
+                                            class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span
+                                            class="ace_meta ace_tag ace_tag-name ace_xml">ul</span><span
+                                            class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span>
+                                    </div>
+                                    <div class="ace_line" style="height:20px">
+                                    <span class="ace_text ace_xml">      {% endif %}</span></div>
+                                <div class="ace_line" style="height:20px">
+                                <span class="ace_text ace_xml">    {% endwith %}</span></div>
+                            <div class="ace_line" style="height:20px"><span
+                                    class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span
+                                    class="ace_meta ace_tag ace_tag-name ace_xml">p</span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div>
+                            <div class="ace_line" style="height:20px"><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span
+                                    class="ace_meta ace_tag ace_form ace_tag-name ace_xml">form</span><span
+                                    class="ace_text ace_tag-whitespace ace_xml"> </span><span
+                                    class="ace_entity ace_other ace_attribute-name ace_xml">method</span><span
+                                    class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span
+                                    class="ace_string ace_attribute-value ace_xml">"post"</span><span
+                                    class="ace_text ace_tag-whitespace ace_xml"> </span><span
+                                    class="ace_entity ace_other ace_attribute-name ace_xml">action</span><span
+                                    class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span
+                                    class="ace_string ace_attribute-value ace_xml">"/"</span><span
+                                    class="ace_text ace_tag-whitespace ace_xml"> </span><span
+                                    class="ace_entity ace_other ace_attribute-name ace_xml">enctype</span><span
+                                    class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span
+                                    class="ace_string ace_attribute-value ace_xml">"multipart/form-data"</span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div>
+                            <div class="ace_line" style="height:20px"><span class="ace_text ace_xml">    </span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span
+                                    class="ace_meta ace_tag ace_tag-name ace_xml">dl</span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div>
+                            <div class="ace_line" style="height:20px"><span class="ace_indent-guide">    </span><span
+                                    class="ace_text ace_xml">    </span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span
+                                    class="ace_meta ace_tag ace_tag-name ace_xml">p</span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div>
+                            <div class="ace_line" style="height:20px"><span class="ace_indent-guide">    </span><span
+                                    class="ace_indent-guide">    </span><span class="ace_text ace_xml">    </span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span
+                                    class="ace_meta ace_tag ace_form ace_tag-name ace_xml">input</span><span
+                                    class="ace_text ace_tag-whitespace ace_xml"> </span><span
+                                    class="ace_entity ace_other ace_attribute-name ace_xml">type</span><span
+                                    class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span
+                                    class="ace_string ace_attribute-value ace_xml">"file"</span><span
+                                    class="ace_text ace_tag-whitespace ace_xml"> </span><span
+                                    class="ace_entity ace_other ace_attribute-name ace_xml">name</span><span
+                                    class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span
+                                    class="ace_string ace_attribute-value ace_xml">"files[]"</span><span
+                                    class="ace_text ace_tag-whitespace ace_xml"> </span><span
+                                    class="ace_entity ace_other ace_attribute-name ace_xml">multiple</span><span
+                                    class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span
+                                    class="ace_string ace_attribute-value ace_xml">"true"</span><span
+                                    class="ace_text ace_tag-whitespace ace_xml"> </span><span
+                                    class="ace_entity ace_other ace_attribute-name ace_xml">autocomplete</span><span
+                                    class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span
+                                    class="ace_string ace_attribute-value ace_xml">"off"</span><span
+                                    class="ace_text ace_tag-whitespace ace_xml"> </span><span
+                                    class="ace_entity ace_other ace_attribute-name ace_xml">required</span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div>
+                            <div class="ace_line" style="height:20px"><span class="ace_indent-guide">    </span><span
+                                    class="ace_text ace_xml">    </span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span
+                                    class="ace_meta ace_tag ace_tag-name ace_xml">p</span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div>
+                            <div class="ace_line" style="height:20px"><span class="ace_text ace_xml">    </span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span
+                                    class="ace_meta ace_tag ace_tag-name ace_xml">dl</span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div>
+                            <div class="ace_line" style="height:20px"><span class="ace_text ace_xml">    </span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span
+                                    class="ace_meta ace_tag ace_tag-name ace_xml">p</span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div>
+                            <div class="ace_line" style="height:20px"><span class="ace_indent-guide">    </span><span
+                                    class="ace_text ace_xml">    </span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span
+                                    class="ace_meta ace_tag ace_form ace_tag-name ace_xml">input</span><span
+                                    class="ace_text ace_tag-whitespace ace_xml"> </span><span
+                                    class="ace_entity ace_other ace_attribute-name ace_xml">type</span><span
+                                    class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span
+                                    class="ace_string ace_attribute-value ace_xml">"submit"</span><span
+                                    class="ace_text ace_tag-whitespace ace_xml"> </span><span
+                                    class="ace_entity ace_other ace_attribute-name ace_xml">value</span><span
+                                    class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span
+                                    class="ace_string ace_attribute-value ace_xml">"Submit"</span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div>
+                            <div class="ace_line" style="height:20px"><span class="ace_text ace_xml">    </span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span
+                                    class="ace_meta ace_tag ace_tag-name ace_xml">p</span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div>
+                            <div class="ace_line" style="height:20px"><span
+                                    class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span
+                                    class="ace_meta ace_tag ace_form ace_tag-name ace_xml">form</span><span
+                                    class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div>
+                        </div>
+                        <div class="ace_layer ace_marker-layer"></div>
+                        <div class="ace_layer ace_cursor-layer">
+                            <div class="ace_cursor" style="left: 4px; top: 0px; width: 8.7975px; height: 20px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 20px; bottom: 0px;">
+                    <div class="ace_scrollbar-inner" style="width: 20px; height: 480px;"></div>
+                </div>
+                <div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 20px; left: 51px; right: 0px;">
+                    <div class="ace_scrollbar-inner" style="height: 20px; width: 1362px;"></div>
+                </div>
+                <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;">
+                    <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div>
+                    <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">
+                        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                </div>
+            </div>
+            <div class="splitter-bar splitter-bar-horizontal ui-state-default" unselectable="on"
+                 style="position: absolute; user-select: none; z-index: 100; cursor: n-resize; top: 660px; width: 1362px;">
+                <a accesskey="" tabindex="0"></a></div>
+
+
+            <div id="id_ide_console" class="splitter-pane"
+                 style="height: 0px; position: absolute; z-index: 1; top: 666px; width: 1362px;">
+
+                <div id="id_ide_console_pane_buttons">
+                    <center>
+
+                        <p>This is not a Python file, you can't run it here.</p>
+
+                    </center>
+                </div>
+                <iframe style="display: none" id="id_console" name="console" class="soft_keyboard_sensitive"
+                        src="./upload.html _ _home_AriChikkere_mysite_templates_upload.html _ Editor _ AriChikkere _ PythonAnywhere_files/saved_resource.html">
+                </iframe>
+                <div style="display: none;" class="console_limit_reached">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5 col-md-offset-3 well">
+                                <h1>Console limit reached :-/</h1>
+
+                                <p>
+                                    With your current PythonAnywhere account you can have up to
+                                    2 consoles. You can
+                                    have more if you
+                                    <a href="https://www.pythonanywhere.com/user/AriChikkere/account/">upgrade your
+                                        account</a>!
+
+                                </p>
+                                <p>
+                                    Alternatively, if you don't feel like paying us more money, you
+                                    can <a href="https://www.pythonanywhere.com/user/AriChikkere/consoles/">kill some
+                                    consoles on your Consoles page</a>.
+                                </p></div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="id_go_to_line_dialog" class="pa_hidden">
+            <p class="form-inline">Line number: <input id="id_go_to_line_dialog_input"></p>
+            <div class="dialog_buttons">
+                <button class="btn btn-default" id="id_go_to_line_dialog_ok_button">Go</button>
+                <button class="btn btn-default" id="id_go_to_line_dialog_close_button">Close</button>
+            </div>
+        </div>
+
+        <div id="id_file_changed_on_disk" class="pa_hidden">
+            <p>Are you sure you want to save it? Alternatively, you could re-open it in a new tab to check
+                differences</p>
+            <div class="dialog_buttons">
+                <button id="id_force_save" class="btn btn-danger">Force Save</button>
+                <button id="id_cancel_save" class="btn btn-default">Cancel</button>
+            </div>
+        </div>
+
+        <div id="id_save_as_dialog" class="pa_hidden">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="id_save_as_path">Please enter a path:</label>
+                    <input id="id_save_as_path" class="form-control" style="width: 100%;">
+                </div>
+                <img id="id_save_as_spinner" class="spinner pa_hidden"
+                     src="./upload.html _ _home_AriChikkere_mysite_templates_upload.html _ Editor _ AriChikkere _ PythonAnywhere_files/spinner-small.gif">
+                <p>
+                    <span id="id_save_as_error" class="error_message"></span>
+                </p>
+                <div class="dialog_buttons">
+                    <button id="id_save_as_ok" type="submit" class="btn btn-primary">Save</button>
+                    <button id="id_save_as_cancel" type="button" class="btn btn-default">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal fade" id="id_file_sharing_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">×</span></button>
+                        <h4 class="modal-title" id="myModalLabel">File Sharing options</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="id_file_sharing_options">
+                            <div>
+                                <div class="row">
+                                    <div class="col-lg-12"><span>This file is not shared yet.</span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <button class="btn btn-sm btn-default get_sharing_url"><span
+                                                class="glyphicon glyphicon-paperclip" aria-hidden="true"></span> Get
+                                            sharing link
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<div id="id_feedback_dialog" title="Help us improve" style="display:none">
+    <div id="id_feedback_dialog_blurb_big" class="dialog_blurb_big">
+        It's always a pleasure to hear from you!
+    </div>
+    <div id="id_feedback_dialog_blurb_small">
+        Ask us a question, or tell us what you love or hate about PythonAnywhere.<br>
+        We'll get back to you over email ASAP.
+    </div>
+    <textarea id="id_feedback_dialog_text" rows="6"></textarea>
+    <input id="id_feedback_dialog_email_address" type="text"
+           placeholder="Email address (optional - only necessary if you would like us to contact you)"
+           style="display: none;">
+
+    <div id="id_feedback_dialog_error" class="pa_hidden">
+        Sorry, there was an error connecting to the server. <br>Please try again in a few moments...
+    </div>
+    <div class="dialog_buttons">
+        <img id="id_feedback_dialog_spinner"
+             src="./upload.html _ _home_AriChikkere_mysite_templates_upload.html _ Editor _ AriChikkere _ PythonAnywhere_files/spinner-small.gif">
+        <button class="btn btn-primary" id="id_feedback_dialog_ok_button">OK</button>
+        <button class="btn btn-default" id="id_feedback_dialog_cancel_button">Cancel</button>
+    </div>
+</div>
+
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-18014859-6', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+<!-- preload font awesome fonts to avoid glitch when switching icons -->
+<div style="width: 0; height: 0; overflow: hidden"><i class="fa fa-square-o fa-3x"></i></div>
+
+
+</body>
+</html>

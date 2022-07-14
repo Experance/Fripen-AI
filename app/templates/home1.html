@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="/static/images/ai-camp-logo-128x128.png" type="image/x-icon">
+    <meta name="description" content="">
+
+    <title>Emotion Detector by AI Camp</title>
+    <link rel="stylesheet" href="/static/web/assets/mobirise-icons/mobirise-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700&subset=latin,vietnamese,latin-ext">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&subset=latin,cyrillic">
+    <link rel="stylesheet" href="/static/tether/tether.min.css">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/puritym/css/style.css">
+    <link rel="stylesheet" href="/static/mobirise/css/mbr-additional.css" type="text/css">
+
+
+    <style>
+        .spinner {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-left: -50px;
+            /* half width of the spinner gif */
+            margin-top: -50px;
+            /* half height of the spinner gif */
+            text-align: center;
+            z-index: 1234;
+            overflow: auto;
+            width: 100px;
+            /* width of the spinner gif
+        */
+            height: 102px;
+            /*hight of the spinner gif +2px to fix IE8 issue */
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="spinner" class="spinner" style="display:none;">
+        <img id="img-spinner" src="/static/images/spinner.gif" alt="Loading" />
+    </div>
+    <nav class="navbar navbar-light mbr-navbar" id="ext_menu-4" data-rv-view="11" style="background-color: rgb(242, 242, 242);">
+        <div class="container">
+            <button class="navbar-toggler pull-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+            <div class="hamburger-icon"></div>
+        </button>
+
+            <div class="clearfix"></div>
+            <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar2">
+                <span class="navbar-logo"><a href="https://www.ai-camp.org"><img src="/static/images/ai-camp-logo-128x128.png" alt="AI Camp"></a></span>
+                <span><a class="navbar-brand" href="/">Emotion Detector by AI Camp</a></span>
+
+                <ul class="nav navbar-nav pull-xs-right">
+                    <li class="nav-item"><a class="btn btn-success-outline btn-success" href="http://www.ai-camp.org">Join AI Camp</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav pull-xs-right">
+                    <li class="nav-item"><a class="nav-link" href="https://github.com/zikegcwk/aicamp">See our code at github</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="mbr-section mbr-section-full mbr-parallax-background mbr-after-navbar" id="header2-5" data-rv-view="13" style="background-image: url(/static/images/surprised-baby-1984x1116.jpg);">
+        <div class="mbr-table-cell">
+            <div class="mbr-overlay" style="opacity: 0.1; background-color: rgb(0, 0, 0);"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-4 text-xs-right">
+
+                        <h1 class="mbr-section-title display-1">A.I. that recognizes your emotion</h1>
+                        <p class="lead">Crafted by a group of high school students from <span class='text-blod'><a class='text-black' href="https://www.ai-camp.org">AI Camp</a></span></p>
+                        <div class="mbr-buttons--left">
+                            <div class="mbr-section-btn">
+                                <a class="btn btn-lg btn-success display-5" href='#' id='seefood_button'>
+                                    <form id='seefood_form' method=post enctype=multipart/form-data>
+                                        <input id="seefood_input_field" name="file" type="file" onchange="this.form.submit();" hidden/>
+                                    </form>
+                                    <span class="mbri-camera mbr-iconfont mbr-iconfont-btn" style="font-size: 40px;"></span>Touch to see emotion
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="mbr-arrow" href="#gallery1-f"><span class="mbri-down mbr-iconfont"></span></a>
+        </div>
+    </section>
+
+    <section class="mbr-section" id="gallery1-f" data-rv-view="16" style="background-color: rgb(239, 239, 239); padding-top: 0rem; padding-bottom: 0rem;">
+        <!-- Gallery -->
+        <div class='container-fluid no-padding'>
+            <div class="row">
+                <div class="col-sm-6 col-md-3 nopadding" style='padding: 0 !important; margin: 0 !important;'>
+                    <img src="/static/images/happy-450x450-450x450.png" alt="" title="" class="img-fluid nopadding">
+                </div>
+                <div class="col-sm-6 col-md-3 nopadding" style='padding: 0 !important; margin: 0 !important;'>
+                    <img src="/static/images/neutral-450x450-450x450.png" alt="" title="" class="img-fluid nopadding">
+                </div>
+                <div class="col-sm-6 col-md-3 nopadding" style='padding: 0 !important; margin: 0 !important;'>
+                    <img src="/static/images/sad-450x450-450x450.png" alt="" title="" class="img-fluid nopadding">
+                </div>
+                <div class="col-sm-6 col-md-3 nopadding" style='padding: 0 !important; margin: 0 !important;'>
+                    <img src="/static/images/surprised-1-450x450-450x450.png" alt="" title="" class="img-fluid nopadding">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="mbr-section mbr-section-nopadding" id="msg-box5-h" data-rv-view="35" style="background-color: rgb(255, 255, 255); padding-top: 0rem; padding-bottom: 0rem;">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-9 mbr-table-cell-lg image-size" style="width: 50%;">
+                    <div class="mbr-figure"><iframe class="mbr-embedded-video" src="https://www.youtube.com/embed/xZYPPYvJsv4?rel=0&amp;amp;showinfo=0&amp;autoplay=1&amp;loop=1&amp;playlist=xZYPPYvJsv4" width="1280" height="720" frameborder="0" allowfullscreen></iframe></div>
+                </div>
+                <div class="col-xs-12 col-lg-3 mbr-inner-padding text-xs-center mbr-table-cell-lg">
+                    <h3 class="mbr-section-title display-4">Watch our demo</h3>
+
+                    <div class="lead">
+                        <p>This is an initial model where we just had two emotions detected: happy and neutral. Since then, our model can detect four emotions really well: happy, neutral, surprised, and angry.&nbsp;</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="mbr-section mbr-section-small" id="msg-box1-6" data-rv-view="38" style="background-color: rgb(242, 242, 242); padding-top: 6rem; padding-bottom: 4.5rem;">
+
+
+        <div class="container">
+            <div class="row">
+
+                <div>
+
+                    <div class="col-sm-8">
+                        <h2 class="mbr-section-title h1">Learn how we made this in three weeks with zero coding experience.</h2>
+
+                    </div>
+                    <div class="col-sm-2 text-xs-left">
+                        <a target="_blank" class="btn btn-md btn-secondary-outline" href="https://www.ai-camp.org">Read Thomas' blog</a>
+                    </div>
+                    <div class="col-sm-2 text-xs-right">
+                        <a target="_blank" class="btn btn-md btn-secondary-outline" href="https://medium.com/@beatrice.miha/i-learned-how-to-learn-dive-into-the-deepest-ocean-3add9449eb7e?sk=cbba7190acc5b9452a57c714545bef9c">Read Beatrice's blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mbr-section mbr-section-small" id="features1-9" data-rv-view="41" style="background-color: rgb(255, 255, 255); padding-top: 6rem; ">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="card cart-block">
+                        <div><img src="/static/images/beatrice-600x600.jpg" class="card-img-top"></div>
+                        <div class="card-block">
+                            <h4 class="card-title text-xs-center">Beatrice Mihalache</h4>
+                            <p class="card-text">
+                                Student at Los Gatos High School. She loves how fast we learned things at AI Camp and contributed to our data extraction and frontend.
+                            </p>
+                            <div class="text-xs-center"><a target="_blank" href="https://www.linkedin.com/in/beatrice-mihalache-2bb39a18b/" class="btn btn-secondary-outline">Linkedin</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card cart-block">
+                        <div><img src="/static/images/ari.jpg" class="card-img-top"></div>
+                        <div class="card-block">
+                            <h4 class="card-title text-xs-center">Aryansh Chikkere</h4>
+                            <p class="card-text">Student at American High School. Ari wants to study Physics and built the initial backend of the site.</p>
+                            <div class="text-xs-center"><a target="_blank" href="https://www.linkedin.com/in/aryansh-chikkere-36b39918b/" class="btn btn-secondary-outline">Linkedin</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card cart-block">
+                        <div><img src="/static/images/clem-600x600.jpg" class="card-img-top"></div>
+                        <div class="card-block">
+                            <h4 class="card-title text-xs-center">Clement Ou</h4>
+                            <p class="card-text">Student at Henry M. Gunn High School. Clement is perhaps the most quoted student at AI Camp. He trained our models by using a deep learning instance at AWS.</p>
+                            <div class="text-xs-center"><a target="_blank" href="https://www.linkedin.com/in/clement-ou-193a2a149/" class="btn btn-secondary-outline">Linkedin</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card cart-block">
+                        <div><img src="/static/images/muti-600x600.jpg" class="card-img-top"></div>
+                        <div class="card-block">
+                            <h4 class="card-title text-xs-center">Muti Shuman</h4>
+                            <p class="card-text">Student at Junipero Serra High School. Muti is our 7-foot coder. He built scripts to capture data using OpenCV and prepared our data for training.</p>
+                            <div class="text-xs-center"><a target="_blank" href="https://www.linkedin.com/in/muti-shuman-b574a9158/" class="btn btn-secondary-outline">Linkedin</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mbr-section mbr-section-small" id="features1-g" data-rv-view="44" style="background-color: rgb(255, 255, 255);">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="card cart-block">
+                        <div><img src="/static/images/thomas-600x600.jpg" class="card-img-top"></div>
+                        <div class="card-block">
+                            <h4 class="card-title text-xs-center">Thomas Chen</h4>
+                            <p class="card-text">Student at Mission High School. Thomas was surprised that we actually learned AI in three weeks! He built the initial script for us to get data from search engines and the frontend.</p>
+                            <div class="text-xs-center"><a target="_blank" href="https://www.linkedin.com/in/thomas-chen-82239918b/" class="btn btn-secondary-outline">Linkedin</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card cart-block">
+                        <div><img src="/static/images/ying.jpg" class="card-img-top"></div>
+                        <div class="card-block">
+                            <h4 class="card-title text-xs-center">
+                                Dr. Ying Jiang
+                            </h4>
+                            <p class="card-text">Ying is one of our instructors. She is a Lead Data Scientist at Ericsson. She's passionate about education and learning. She graduated from Cornell with a BS and Stanford with a Ph.D. in Chemical Engineering.</p>
+                            <div class="text-xs-center"><a target="_blank" href="https://www.linkedin.com/in/azzurraying/" class="btn btn-secondary-outline">Linkedin</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card cart-block">
+                        <div><img src="/static/images/michael.jpg" class="card-img-top"></div>
+                        <div class="card-block">
+                            <h4 class="card-title text-xs-center">Dr. Michael Ke Zhang</h4>
+                            <p class="card-text">Michael is one of our instructors. Previously he ran data teams at Blend Labs and Grab. He's also a founder and EIR at Fusion Fund. He enjoys teaching and inspiring the next generation of students. He graduated from Caltech
+                                with a BS and Stanford with a Ph.D. in Applied Physics.</p>
+                            <div class="text-xs-center"><a target="_blank" href="https://www.linkedin.com/in/michaelkezhang" class="btn btn-secondary-outline">Linkedin</a></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="mbr-section" id="msg-box3-k" data-rv-view="47" style="background-color: rgb(255, 248, 224); padding-top: 9rem; padding-bottom: 9rem;">
+
+        <div class="container">
+            <div class="row text-xs-center">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <h2 class="mbr-section-title display-3">Learn AI in three weeks with zero coding experience.</h2>
+
+
+                    <div class="lead">
+                        <p>AI Camp teaches AI, how to learn, and a career framework for you to pick your best major/career for mid and high school students. Join us now!&nbsp;</p>
+                    </div>
+                    <div><a class="btn btn-lg btn-success-outline btn-success" href="https://mobirise.com">Join AI Camp</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="/static/web/assets/jquery/jquery.min.js"></script>
+    <script src="/static/tether/tether.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/jarallax/jarallax.js"></script>
+    <script src="/static/masonry/masonry.pkgd.min.js"></script>
+    <script src="/static/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/bootstrap-carousel-swipe/bootstrap-carousel-swipe.js"></script>
+    <script src="/static/smooth-scroll/smooth-scroll.js"></script>
+    <script src="/static/puritym/js/script.js"></script>
+    <script>
+        // added to get upload with a button working
+        document.getElementById('seefood_button').addEventListener('click', openDialog);
+
+        function openDialog() {
+            document.getElementById('seefood_input_field').click();
+        }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#spinner").bind("ajaxSend", function() {
+                $(this).show();
+            }).bind("ajaxStop", function() {
+                $(this).hide();
+            }).bind("ajaxError", function() {
+                $(this).hide();
+            });
+            // seefood_input_field
+            $('#seefood_button').click(function() {
+
+            });
+
+            // $("#seefood_form").focus(function() {
+            //     $('#spinner').show();
+            // });
+
+
+        });
+    </script>
+
+</body>
+
+</html>

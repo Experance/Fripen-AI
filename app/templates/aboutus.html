@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="it">
+  <meta name="keywords" content="AI, Emotion Detector, AI Project, Deep Learning">
+  
+  <meta name="author" content="">
+
+  <title>Fruit Ripeness Detector</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/plugins/fontawesome/css/all.css">
+
+  <!-- Main Stylesheet -->
+         <link rel= "stylesheet" type= "text/css" href= "../static/css/data-style.css">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/data-style.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+  <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='css/aboutusstyle.css')}}">
+  
+    <!-- temp ico need to replace-->
+    <link href="static/favicon.ico" rel="icon" type="image/x-icon">
+    <!-- Font Awesome icons (free version)-->
+
+    <script crossorigin="anonymous" src=
+    "https://use.fontawesome.com/releases/v6.1.0/js/all.js"></script>
+  
+</head>
+
+
+<body id="top-header" style = "background: url({{ url_for('static', filename='images1/blue.jpg') }}); background-size: cover !important; height: 100% !important;">
+
+
+<!-- LOADER TEMPLATE -->
+<div id="page-loader">
+    <div class="loader-icon fa fa-spin colored-border"></div>
+</div>
+<!-- /LOADER TEMPLATE -->
+
+     <!-- NAVBAR
+    ================================================= -->
+        
+    <!-- Navigation-->
+    <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a href="home.html"><strong>Ripen</strong></a>
+        </li>
+
+        <li class="sidebar-nav-item">
+          <a href="home.html">Home</a>
+        </li>
+
+        <li class="sidebar-nav-item">
+          <a href="aboutus.html">About</a>
+        </li>
+
+        <li class="sidebar-nav-item">
+          <a href="data.html">Data</a>
+        </li>
+
+        <li class="sidebar-nav-item">
+          <a href="ourjourney.html">The Journey</a>
+        </li>
+
+      </ul>
+    </nav>
+    <a id="home"></a>
+ <!-- HERO
+    ================================================== -->
+
+       
+
+        <!-- CARD SETUP -->
+        <div class="" style = "padding:2rem; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%)">
+          
+          <!-- CARD NUMBER 0 -->
+               <!-- This Card has no FLIP -->
+              <div class = "mySlides" style = "width: 40rem; height: 25rem; perspective: 1000px; border-radius: 30px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+
+                <div style="border-radius: 30px; background-color: white;">
+                <div class = "col-sm-6 text-center" style = "top: 15px">
+                <h1 class = "display-4 text-center" style = "margin-left: 0px; text-shadow: 5px 5px 10px black; opacity: 90%">
+                  About <b style= "color: purple; text-shadow: 5px 5px 10px purple; opacity: 90%;">Us</b>
+                </h1>
+                <h3 class = "display-6 text-left" style = "margin-left: 20px; margin-top: 17px;  font-size: 1.2rem; ">
+                  Use the <b style= "color: purple;">arrows</b> on the left and right side of the screen to scroll through each person. Hover over slides to see more content. Or use the arrow keys on your keyboard to move through the slides. Use up or down keys to flip the cards.(Don't hover over cards at the same time using arrow keys!)
+                </h3>
+              </div>
+                  
+              <div class="col-sm-6 img-container" style="right: -20rem; top: -15rem;">
+                <img class = "img-fluid" style = "position:relative; top:-30px;  max-width: 85%; max-height: 85%; display: block; border-radius:15px;" src="{{ url_for('static', filename='images1/ourlogo.png')}}">
+              </div>
+                
+                
+              </div>
+          </div>
+              <!-- CARD NUMBER 1 -->
+              <div class = "mySlides" id="cardflip1" style="width: 40rem; height: 25rem; perspective: 1000px; border-radius: 30px;">
+                <div class="flipper">
+                  
+                  <div class="front">
+         
+                    <div>
+                      <h1 class = "display-4 text-center" style = "margin-left: 0px; margin-top: 15px;">
+                        <b style= "color: green;">Aviel Wood</b>
+                      </h1>
+                      <img class = "img-fluid" style = "position:relative; top: 45px; margin-left: -250px; width: 50%; height: 50%; border-radius: 15px;" src="{{ url_for('static', filename='images1/aviel.JPG')}}">
+                    </div>
+                    
+                    <div class="text-left" style="margin-right: 6%; margin-top: -32%; margin-left: 60%; text-align:center;">
+                      <p>
+                        "AI Camp was so enjoyable, as it was a time to learn more about coding in the real world with partners. One of the best parts is the passion of everyone, giving an enjoyable and great working / learning environment. It's surprising how one's learning ability and project creating can be so great in such short time!"
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div class = "back">
+                    <h1 class = "display-4 h-class-c" style = "font-size: 1.9rem; margin-left: 0px; margin-top: 100px">
+                      <b style="font-weight: bold;">Aviel</b> 
+                    </h1>
+                    <h4 class = "display-5 mt-4 mr-4" style = "text-indent: 20px; margin-left: 5%; margin-right: 8%">
+                     I am a student at Woodinville High School who enjoys soccer, piano, hiking, camping, math, and of course, Computer Science. I worked on the frontend(mostly the About us page and contributed some to the data page), some data science, and the some of the math / statistics of the project.
+                    </h4>
+                  </div>
+              </div>
+             </div>
+             
+
+          
+          <!-- CARD NUMBER 2 -->
+              <div class = "mySlides" id="cardflip2" style="width: 40rem; height: 25rem; perspective: 1000px; border-radius: 30px;">
+                <div class="flipper">
+                  
+                  <div class="front">
+         
+                    <div>
+                      <h1 class = "display-4 text-center" style = "margin-left: 0px; margin-top: 15px;">
+                        <b style= "color: green;">Dhairya Viramgama</b>
+                      </h1>
+                      <img class = "img-fluid" style = "position:relative; top: 10px; margin-left: -250px; width: 50%; height: 50%; border-radius: 15px;" src="{{ url_for('static', filename='images/dv.jpg')}}">
+                    </div>
+                    
+                    <div class="text-right" style="margin-right: 6%; margin-top: -42%; margin-left: 60%; text-align:center;">
+                      <p>
+                        "AI camp was a very unique and amazing experience for me as I learned so much without lectures. The amount of stuff I learned in just these 3 weeks is crazy. I got to use my python skills and implement them while learning more. AI camp has the perfect environment one needs to learn while having fun."
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div class = "back">
+                    <h1 class = "display-4 h-class-c" style = "font-size: 1.9rem; margin-left: 0px; margin-top: 100px">
+                      <b style="font-weight: bold;">Dhairya</b> 
+                    </h1>
+                    <h4 class = "display-5 mt-4 mr-4" style = "text-indent: 20px; margin-left: 5%; margin-right: 8%">
+                     I am a student at Baton Rouge Magnet High School and I enjoy coding, playing tennis, and gaming. I was part of the Data Science team and worked on training models and analyzing their performance to choose the best one. I also helped the web/dev team with the OurJourney page and the Data page.
+                    </h4>
+                  </div>
+              </div>
+             </div>
+          
+          
+          
+          <!-- CARD NUMBER 3 -->
+              <div class = "mySlides" id="cardflip3" style="width: 40rem; height: 25rem; perspective: 1000px; border-radius: 30px;">
+                <div class="flipper">
+                  
+                  <div class="front">
+         
+                    <div>
+                      <h1 class = "display-4 text-center" style = "margin-left: 0px; margin-top: 15px;">
+                        <b style= "color: green;">Andrew Wood</b>
+                      </h1>
+                      <img class = "img-fluid" style = "position:relative;  margin-left: -250px; width: 50%; height: 50%; border-radius: 15px;" src="{{ url_for('static', filename='images1/andrew.JPG')}}">
+                    </div>
+                    
+                    <div class="text-left" style="margin-right: 6%; margin-top: -45%; margin-left: 60%; text-align:center;">
+                      <p>
+                        "AI Camp has a unique teaching environment, where you are expected to use one of the greatest resources out there (the internet() to aid in your learning. This, paired with an amazing patient instructor (thanks Hyrum) along with group mates who share your love for coding helped produce the product you see now."
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div class = "back">
+                    <h1 class = "display-4 h-class-c" style = "font-size: 1.9rem; margin-left: 0px; margin-top: 100px">
+                      <b style="font-weight: bold;">Andrew</b> 
+                    </h1>
+                    <h4 class = "display-5 mt-4 mr-4" style = "text-indent: 20px; margin-left: 5%; margin-right: 8%">
+                     I am a student at Woodinville High School who enjoys coding, math, playing soccer, hiking, and the piano. I was the project manager, and contributed to data extraction, cleaning, and model training, as well as website work; in the frontend I contributed to the home page and about page, and in the backend I helped create redirects for the website. I also built our logo. (Btw, I'm not affilitated with UU in any way.)
+                    </h4>
+                  </div>
+              </div>
+             </div>
+          
+          <!-- CARD NUMBER 4 -->
+              <div class = "mySlides" id="cardflip4" style="width: 40rem; height: 25rem; perspective: 1000px; border-radius: 30px;">
+                <div class="flipper">
+                  
+                  <div class="front">
+         
+                    <div>
+                      <h1 class = "display-4 text-center" style = "margin-left: 0px; margin-top: 15px;">
+                        <b style= "color: green;">Rex Ouyang</b>
+                      </h1>
+                      <img class = "img-fluid" style = "position:relative; top: 45px; margin-left: -250px; width: 50%; height: 50%; border-radius: 15px;" src="{{ url_for('static', filename='images1/aviel.JPG')}}">
+                    </div>
+                    
+                    <div class="text-right" style="margin-right: 6%; margin-top: -25%; margin-left: 60%; text-align:center;">
+                      <p>
+                        "AI Camp was a great, time to learn more about coding in the real world with partners. One of the best parts is the passion of everyone, giving an enjoyable and great working / learning environment"
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div class = "back">
+                    <h1 class = "display-4 h-class-c" style = "font-size: 1.9rem; margin-left: 0px; margin-top: 100px">
+                      <b style="font-weight: bold;">Aviel</b> 
+                    </h1>
+                    <h4 class = "display-5 mt-4 mr-4" style = "text-indent: 20px; margin-left: 5%; margin-right: 8%">
+                     I am a student at Woodinville High School who enjoys soccer, piano, hiking, camping, math, and of course, Computer Science. I worked on the frontend, some data science, and the math / statistics of the project.
+                    </h4>
+                  </div>
+              </div>
+             </div>
+
+          
+          <!-- CARD NUMBER 5 -->
+              <div class = "mySlides" id="cardflip5" style="width: 40rem; height: 25rem; perspective: 1000px; border-radius: 30px;">
+                <div class="flipper">
+                  
+                  <div class="front">
+         
+                    <div>
+                      <h1 class = "display-4 text-center" style = "margin-left: 0px; margin-top: 15px;">
+                        <b style= "color: green;">Nabiha Jawad</b>
+                      </h1>
+                      <img class = "img-fluid" style = "position:relative; top: 45px; margin-left: -250px; width: 50%; height: 50%; border-radius: 15px;" src="{{ url_for('static', filename='images1/aviel.JPG')}}">
+                    </div>
+                    
+                    <div class="text-right" style="margin-right: 6%; margin-top: -25%; margin-left: 60%; text-align:center;">
+                      <p>
+                        "AI Camp introduced me to some concepts I had no idea ever existed. As someone, who loves math, I really enjoyed learning about how I can work with AI in areas that I am passionate about. This was truly unlike any experience I've ever had!"
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div class = "back">
+                    <h1 class = "display-4 h-class-c" style = "font-size: 1.9rem; margin-left: 0px; margin-top: 100px">
+                      <b style="font-weight: bold;">Nabiha</b> 
+                    </h1>
+                    <h4 class = "display-5 mt-4 mr-4" style = "text-indent: 20px; margin-left: 5%; margin-right: 8%">
+                     I am a student at Santa Clara High School and I enjoy playing table tennis, hiking, and math. I was the mathematician/statistician and helped with the website as well.
+                    </h4>
+                  </div>
+              </div>
+             </div>
+          
+          <!-- CARD NUMBER 6 -->
+              <div class = "mySlides" id="cardflip6" style="width: 40rem; height: 25rem; perspective: 1000px; border-radius: 30px;">
+                <div class="flipper">
+                  
+                  <div class="front">
+         
+                    <div>
+                      <h1 class = "display-4 text-center" style = "margin-left: 0px; margin-top: 15px;">
+                        <b style= "color: green;">Reign O'Keefe</b>
+                      </h1>
+                      <img class = "img-fluid" style = "position:relative; top: 30px; margin-left: -250px; width: 40%; height: 40%; border-radius: 15px;" src="{{ url_for('static', filename='images1/reign.jpg')}}">
+                    </div>
+                    
+                    <div class="text-left" style="margin-right: 6%; margin-top: -35%; margin-left: 60%; text-align:center; font-size: 13px;">
+                      <p>
+                        "AI Camp was a great Journey, and i have always been a self taught programmer but with AI Camp working with your instructor and teammates your able to learn a whole programming language in just three weeks. A another big plus is i am able to add this amazing experience onto my portfolio and use this experience for other projects!!"
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div class = "back">
+                    <h1 class = "display-4 h-class-c" style = "font-size: 1.9rem; margin-left: 0px; margin-top: 100px">
+                      <b style="font-weight: bold;">Reign</b> 
+                    </h1>
+                    <h4 class = "display-5 mt-4 mr-4" style = "text-indent: 20px; margin-left: 5%; margin-right: 8%">
+                     I am a student at Core Charter School who enjoys Music, Hydroponics, Basketball, History, and of course, Computer Science mainley Web Dev. I worked on the front-end of the website, and i worked on helping to train the AI.
+                    </h4>
+                  </div>
+              </div>
+             </div>
+         
+          
+          <!-- CARD NUMBER 7 -->
+              <div class = "mySlides" id="cardflip7" style="width: 40rem; height: 25rem; perspective: 1000px; border-radius: 30px;">
+                <div class="flipper">
+                  
+                  <div class="front">
+         
+                    <div style = "margin-top: -3%">
+                      <h1 class = "display-4 text-center" style = "margin-left: 0px; margin-top: 25px; padding-bottom: -15px">
+                        <b style= "color: green;">Hyrum Hansen</b>
+                      </h1>
+                      <img class = "img-fluid" style = "position:relative; top: 45px; margin-left: -250px; width: 45%; height: 45%; border-radius: 15px;" src="{{ url_for('static', filename='images/hyrum_hansen.jpg')}}">
+                    </div>
+                    
+                    <div class="text-left" style="margin-right: 6%; margin-top: -36%; margin-left: 60%; text-align:center;">
+                      <p>
+                        "Teaching at AI camp has been a fun, formative experience. I've learned useful software engineering skills while building meaningful relationships with mentors, colleagues, and students. I couldn't ask for a better way to spend the summer before grad school!"
+                      </p>
+                    </div>
+                  </div>
+                  <div class = "back">
+                    <h1 class = "display-4 h-class-c" style = "font-size: 1.9rem; margin-left: 0px; margin-top: 100px">
+                      <b style="font-weight: bold;">Hyrum Hansen</b> 
+                    </h1>
+                    <h4 class = "display-5 mt-4 mr-4" style = "text-indent: 20px; margin-left: 10%; margin-right: 10%; text-align: left;">
+                     Hyrum has enjoyed instructing the wireless-invaders. His team has consistently demonstrated superior work-ethic, ingenuity, and a desire to learn. He couldn't be prouder of the work they've accomplished in just three weeks! Hyrum looks forward to seeing the amazing things they will do, encouraging adherence to the age-old-proverb: <i>"A responsible adult says NO to non-euclidean space."</i>
+                    </h4>
+                  </div>
+              </div>
+             </div>
+          
+          
+          
+          
+        </div>
+
+          <a class="prev" onclick="backward()" style="color: purple;">&#10094;</a>
+          <a class="next" onclick="forward()" style="color: purple;">&#10095;</a>
+
+    <!--  Page Scroll to Top  -->
+
+    <a class="scroll-to-top" href="#top-header">
+        <i class="fa fa-angle-up"></i>
+    </a>
+
+
+    <!-- 
+    Essential Scripts
+    =====================================-->
+    <!-- Main jQuery -->
+    <script src="{{ url_for('static', filename='plugins/jquery/jquery.min.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/theme.js')}}"></script>
+  <script>
+    // arrow keys cause slide to move to next or flip
+    let cardIndexs = [0, 1, 2, 3, 4, 5, 6, 7];
+    let val = 0;
+    let idd = "#cardflip";
+    document.body.addEventListener('keydown', function(event)
+                                       {
+            const key = event.key;
+            switch (key) {
+                case "ArrowLeft":
+                    backward();
+                    break;
+                case "ArrowRight":
+                    forward();
+                    break;
+                case "ArrowUp":
+                    if(val != 0){
+                      idd+= cardIndexs[val];
+                      document.querySelector(idd).classList.toggle("hover");
+                      idd = "#cardflip";
+                    }
+                      break;
+                case "ArrowDown":
+                    if(val != 0){
+                      idd+= cardIndexs[val];
+                      document.querySelector(idd).classList.toggle("hover");
+                      idd = "#cardflip";
+                    }
+                    break;
+            }
+        });
+    /*
+    document.getElementsByClassName("mySlides")[val].addEventListener('mouseover', function(event){
+      idd+= cardIndexs[val];
+      document.querySelector(idd).classList.toggle("hover")
+      idd = "#cardflip";
+    });
+     document.getElementById("mySlides")[val].addEventListener('mouseout', function(event){
+      idd+= cardIndexs[val];
+      document.querySelector(idd).classList.toggle("hover")
+      idd = "#cardflip";
+    });
+    */
+    function forward(){
+      if(cardIndexs[val] == 7){
+        val = 0;
+        plusSlides(1);
+      }else{
+        val++;
+        plusSlides(1);
+      }
+    }
+    
+    function backward(){
+      if(cardIndexs[val] == 0){
+        val = 7;
+        plusSlides(-1);
+      }else{
+        val--;
+        plusSlides(-1);
+      }
+    }
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "flex";
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
+      <script src="js/scripts.js"></script> 
+    <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
+  </body>
+  </html>
