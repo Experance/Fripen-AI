@@ -17,9 +17,9 @@ Click on "Click to test fruit" and upload an image of a banana, apple, or bluebe
 
 ### Roles (About Us)
 
-Name | Role
+**Name** | **Role**
 ---- | ----
-**Hyrum Hansen | Leader (instructor)**
+**Hyrum Hansen** | **Leader (instructor)**
 Andrew Wood | Product Manager & Web Developer (frontend and backend)
 Reign OKeefe | Web Design & Web Developer (frontend)
 Dhairya Viramgama | Data Scientist & Web Developer (frontend)
