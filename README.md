@@ -1,4 +1,4 @@
-# Fripen Fruit Ripeness Detector
+# *Fripen* Fruit Ripeness Detector
 
 Built with a handy CV Web Scaffold (but the website almost completely written from scratch), this website holds a model which can detect fruit ripeness for apples (specifically ripe red apples vs green unripe apples), bananas, and blueberries. (Scaffold here: [Github](https://github.com/organization-x/omni/tree/omni_cv))
 
@@ -9,26 +9,22 @@ Made in 3 weeks from ground zero to ground hero 😆 @AICamp
 
 Go to our website [here](https://cocalc19.ai-camp.dev/1f5857f2-6682-4940-8a34-bfeaf3edb175/port/12345/). 
 ![Picture of the home page](app/static/images1/frontpageofwebsite.png)
+[link]
+
+[link](https://cocalc19.ai-camp.dev/1f5857f2-6682-4940-8a34-bfeaf3edb175/port/12345/)
+
 Click on "Click to test fruit" and upload an image of a banana, apple, or blueberry. Our pretrained model will then detect the fruit and it's level of ripeness.
 
 ### Roles (About Us)
 
 Name | Role
-
------|-----
-
+---- | ----
 **Hyrum Hansen | Leader (instructor)**
-
 Andrew Wood | Product Manager & Web Developer (frontend and backend)
-
 Reign OKeefe | Web Design & Web Developer (frontend)
-
 Dhairya Viramgama | Data Scientist & Web Developer (frontend)
-
 Aviel Wood | Data Scientist & Math/Statistician & Web Developer/Design (frontend)
-
 Nabiha Jawad | Math/Sattistician & Web Developer (frontend and backend)
-
 Rex Ouyang | Data Scientist & Web Developer (frontend)
 
 *The roles mentioned above are the main ones each person did, however, everyone pretty much did a bit of every role.*
