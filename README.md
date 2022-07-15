@@ -1,5 +1,5 @@
 # *Fripen* Fruit Ripeness Detector
-***
+
 Built with a handy CV Web Scaffold (but the website almost completely written from scratch), this website holds a model which can detect fruit ripeness for apples (specifically ripe red apples vs green unripe apples), bananas, and blueberries. (Scaffold here: [Github](https://github.com/organization-x/omni/tree/omni_cv))
 
 
