@@ -1,21 +1,18 @@
 # Fripen Fruit Ripeness Detector
-<br>
 
 Built with a handy CV Web Scaffold (but the website almost completely written from scratch), this website holds a model which can detect fruit ripeness for apples (specifically ripe red apples vs green unripe apples), bananas, and blueberries. (Scaffold here: [Github](https://github.com/organization-x/omni/tree/omni_cv))
-<br>
+
+
 Made in 3 weeks from ground zero to ground hero 😆 @AICamp 
-<br>
 
 ### How To Use
-<br>
 
 Go to our website [here](https://cocalc19.ai-camp.dev/1f5857f2-6682-4940-8a34-bfeaf3edb175/port/12345/). 
 ![Picture of the home page](app/static/images1/frontpageofwebsite.png)
 Click on "Click to test fruit" and upload an image of a banana, apple, or blueberry. Our pretrained model will then detect the fruit and it's level of ripeness.
-<br>
 
 ### Roles (About Us)
-<br>
+
 Name | Role
 
 -----|-----
@@ -35,10 +32,8 @@ Nabiha Jawad | Math/Sattistician & Web Developer (frontend and backend)
 Rex Ouyang | Data Scientist & Web Developer (frontend)
 
 *The roles mentioned above are the main ones each person did, however, everyone pretty much did a bit of every role.*
-<br>
 
 ### Resources Used
-<br>
 
 **Libraries**
 
@@ -51,6 +46,7 @@ Rex Ouyang | Data Scientist & Web Developer (frontend)
 -[Pytorch](https://pytorch.org/)
 
 **Technical Stack**
+
 -[Python](https://python.org)
 
 -[YOLOv.5](https://github.com/ultralytics/yolov5)
@@ -62,6 +58,7 @@ Rex Ouyang | Data Scientist & Web Developer (frontend)
 -HTML, CSS, JS
 
 **API's / Tools**
+
 -[SerpAPI](https://serpapi.com/dashboard)
 
 -[Roboflow](https://roboflow.com)
@@ -72,7 +69,7 @@ Rex Ouyang | Data Scientist & Web Developer (frontend)
 
 
 ### Data
-Obtained through a web scraping api (serp api + google)
+Data was obtained through a web scraping api (serp api + google)
 
 ### Cloning Repo Instructions
 
@@ -80,6 +77,6 @@ Start by cloning this repo through the command line:
 
 `git clone https://github.com/Experance/Fripen-AI.git`
 
-After cloning this, clone ultralytics yolov5 in the app folder, by running 
+After cloning this, clone ultralytics yolov5 in the `app` folder, by running 
 
 `git clone https://github.com/ultralytics/yolov5.git`
