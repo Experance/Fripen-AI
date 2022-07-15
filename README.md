@@ -6,16 +6,16 @@ Built with a handy CV Web Scaffold (but the website almost completely written fr
 Made in 3 weeks from ground zero to ground hero 😆 @AICamp 
 
 ### How To Use
+***
 
 Go to our website [here](https://cocalc19.ai-camp.dev/1f5857f2-6682-4940-8a34-bfeaf3edb175/port/12345/). 
-![Picture of the home page](app/static/images1/frontpageofwebsite.png)
-[link]
+[![Picture of the home page](app/static/images1/frontpageofwebsite.png)](https://cocalc19.ai-camp.dev/1f5857f2-6682-4940-8a34-bfeaf3edb175/port/12345/)
 
-[link](https://cocalc19.ai-camp.dev/1f5857f2-6682-4940-8a34-bfeaf3edb175/port/12345/)
 
 Click on "Click to test fruit" and upload an image of a banana, apple, or blueberry. Our pretrained model will then detect the fruit and it's level of ripeness.
 
 ### Roles (About Us)
+***
 
 **Name** | **Role**
 ---- | ----
@@ -30,6 +30,7 @@ Rex Ouyang | Data Scientist & Web Developer (frontend)
 *The roles mentioned above are the main ones each person did, however, everyone pretty much did a bit of every role.*
 
 ### Resources Used
+***
 
 **Libraries**
 
@@ -65,9 +66,12 @@ Rex Ouyang | Data Scientist & Web Developer (frontend)
 
 
 ### Data
+***
+
 Data was obtained through a web scraping api (serp api + google)
 
 ### Cloning Repo Instructions
+***
 
 Start by cloning this repo through the command line: 
 
