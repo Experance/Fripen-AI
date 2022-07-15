@@ -10,7 +10,7 @@
   
   <meta name="author" content="">
 
-  <title>Fruit Ripeness Detector</title>
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/static/plugins/fontawesome/css/all.css">
 
@@ -20,13 +20,13 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
   <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='css/aboutusstyle.css')}}">
   
-    <!-- temp ico need to replace-->
-    <link href="static/favicon.ico" rel="icon" type="image/x-icon">
+    
     <!-- Font Awesome icons (free version)-->
 
     <script crossorigin="anonymous" src=
     "https://use.fontawesome.com/releases/v6.1.0/js/all.js"></script>
-  
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='/images1/ourlogo.png')}}">
+  <title>Fripen About Us Page</title>
 </head>
 
 
@@ -65,15 +65,26 @@
         <li class="sidebar-nav-item">
           <a href="ourjourney.html">The Journey</a>
         </li>
-
+        
+        <li class="sidebar-nav-item">
+          <a href="miscellaneous.html">Miscellaneous</a>
+        </li>
       </ul>
     </nav>
     <a id="home"></a>
  <!-- HERO
     ================================================== -->
-
-       
-
+<div style="display: flex; justify-content: center; ">
+  
+ 
+  <div>
+  
+  
+  <h3 class="text-light" style="font-weight: bold; font-size: 5rem; text-shadow: 5px 5px 10px black; margin: 1rem;">
+    About Us
+    </h3>
+  </div>     
+ </div>
         <!-- CARD SETUP -->
         <div class="" style = "padding:2rem; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%)">
           
@@ -84,7 +95,7 @@
                 <div style="border-radius: 30px; background-color: white;">
                 <div class = "col-sm-6 text-center" style = "top: 15px">
                 <h1 class = "display-4 text-center" style = "margin-left: 0px; text-shadow: 5px 5px 10px black; opacity: 90%">
-                  About <b style= "color: purple; text-shadow: 5px 5px 10px purple; opacity: 90%;">Us</b>
+                  <b style= "color: purple; text-shadow: 5px 5px 10px purple; opacity: 90%;">Usage</b>:
                 </h1>
                 <h3 class = "display-6 text-left" style = "margin-left: 20px; margin-top: 17px;  font-size: 1.2rem; ">
                   Use the <b style= "color: purple;">arrows</b> on the left and right side of the screen to scroll through each person. Hover over slides to see more content. Or use the arrow keys on your keyboard to move through the slides. Use up or down keys to flip the cards.(Don't hover over cards at the same time using arrow keys!)
@@ -156,7 +167,7 @@
                       <b style="font-weight: bold;">Dhairya</b> 
                     </h1>
                     <h4 class = "display-5 mt-4 mr-4" style = "text-indent: 20px; margin-left: 5%; margin-right: 8%">
-                     I am a student at Baton Rouge Magnet High School and I enjoy coding, playing tennis, and gaming. I was part of the Data Science team and worked on training models and analyzing their performance to choose the best one. I also helped the web/dev team with the OurJourney page and the Data page.
+                     I am a student at Baton Rouge Magnet High School and I enjoy coding, math, biking, and playing tennis. I was part of the Data Science team and worked on training models and analyzing their performance to choose the best one. I also helped the web/dev team with the OurJourney page and the Data page.
                     </h4>
                   </div>
               </div>
@@ -205,22 +216,22 @@
                       <h1 class = "display-4 text-center" style = "margin-left: 0px; margin-top: 15px;">
                         <b style= "color: green;">Rex Ouyang</b>
                       </h1>
-                      <img class = "img-fluid" style = "position:relative; top: 45px; margin-left: -250px; width: 50%; height: 50%; border-radius: 15px;" src="{{ url_for('static', filename='images1/aviel.JPG')}}">
+                      <img class = "img-fluid" style = "position:relative; top: 15px; margin-left: -250px; width: 50%; height: 50%; border-radius: 15px;" src="{{ url_for('static', filename='images1/Rex.png')}}">
                     </div>
                     
-                    <div class="text-right" style="margin-right: 6%; margin-top: -25%; margin-left: 60%; text-align:center;">
+                    <div class="text-right" style="margin-right: 6%; margin-top: -40%; margin-left: 60%; text-align:center;">
                       <p>
-                        "AI Camp was a great, time to learn more about coding in the real world with partners. One of the best parts is the passion of everyone, giving an enjoyable and great working / learning environment"
+                        "AI Camp is way different from other classes I have taken in the sense we have to learn most things by ourselves. The fact that I went from knowing almost nothing in python to training an AI in just the span of three weeks is nothing short of incredible!"
                       </p>
                     </div>
                   </div>
                   
                   <div class = "back">
                     <h1 class = "display-4 h-class-c" style = "font-size: 1.9rem; margin-left: 0px; margin-top: 100px">
-                      <b style="font-weight: bold;">Aviel</b> 
+                      <b style="font-weight: bold;">Rex</b> 
                     </h1>
                     <h4 class = "display-5 mt-4 mr-4" style = "text-indent: 20px; margin-left: 5%; margin-right: 8%">
-                     I am a student at Woodinville High School who enjoys soccer, piano, hiking, camping, math, and of course, Computer Science. I worked on the frontend, some data science, and the math / statistics of the project.
+                     I am a student at California High School (yes, it's an actual school lol) who enjoys math, biking, playing the piano and coding. I was one of the Data Scientists and helped gather and clean data, training and optimizing the model. I also helped with the webdev team on the OurJourney and Results page.
                     </h4>
                   </div>
               </div>
@@ -237,10 +248,10 @@
                       <h1 class = "display-4 text-center" style = "margin-left: 0px; margin-top: 15px;">
                         <b style= "color: green;">Nabiha Jawad</b>
                       </h1>
-                      <img class = "img-fluid" style = "position:relative; top: 45px; margin-left: -250px; width: 50%; height: 50%; border-radius: 15px;" src="{{ url_for('static', filename='images1/aviel.JPG')}}">
+                      <img class = "img-fluid" style = "position:relative; top: 45px; margin-left: -250px; width: 50%; height: 50%; border-radius: 15px;" src="https://lh3.googleusercontent.com/SIYQt5geNUsyrMWcP-kH1GfEWjKhzdogr7icsqti8D7iTkUW9pr6NJC0Mu08OHdMeajOMj1x2jLlsZnCWmyIaZtVeSE8CIk0dg3rdqR04obTgNwVtjrhf5qk6xsloSPOqIPKuv8uIANsKDClSVxopW8Qdtus8iErbdCRznf95XafckGTghw9cauyBvXiW_-VhsVnewU3yKgs7NHVfHkb6lnSjdGmdsxR5cjDaaPyEa99NlujBk7EJEXwAVWSd0JS3hLXN3mEehR9QxJIY8atNvrOV7YfvT-gmo6KbcbI-WgmBdGuNi5siIKjYQK-aHa8mAVm8SCJLG0bJKvdAlLBFVurzHrqEbYBaSFCnLJ5RVwzuhNBAPU1r0rQ93Ird1OzJWW43bsJnmUfY7lwCrcVb5x2JIFOwhpVCnQ5PRp1GPkPV5eKFiJdda6T0YcBodbNu5zCezOfBp5-pOwKWiUU32gTRx0byM0l1EqV5VcQd3Gm8Zhm-mMiK0RayRF6k60oDr7dCRSEIPHIv84XRhOZFCVoBsg3NwD8LWcNwHhSQHtH-KisQdFfdMt8PNPstj41vDO__Nd42sqE2u9WLwItOg7rzgFyrKmk7VcdBGsHvYBtHGdxyk4eTf3iCwSRrax9xg_QmORknBJudzoFebbGleH97iLSQG6HfljsFt1o0hm0b8qw_bpvvqNSItdjI7c33tVfCJ6MKcAX-7ZSkU_63v7gu_DJ5We_CCDKwojSu4y1lPrCEO0ZZLVVYHwg=w1942-h1460-no?authuser=0">
                     </div>
                     
-                    <div class="text-right" style="margin-right: 6%; margin-top: -25%; margin-left: 60%; text-align:center;">
+                    <div class="text-right" style="margin-right: 6%; margin-top: -30%; margin-left: 60%; text-align:center;">
                       <p>
                         "AI Camp introduced me to some concepts I had no idea ever existed. As someone, who loves math, I really enjoyed learning about how I can work with AI in areas that I am passionate about. This was truly unlike any experience I've ever had!"
                       </p>
@@ -273,7 +284,7 @@
                     
                     <div class="text-left" style="margin-right: 6%; margin-top: -35%; margin-left: 60%; text-align:center; font-size: 13px;">
                       <p>
-                        "AI Camp was a great Journey, and i have always been a self taught programmer but with AI Camp working with your instructor and teammates your able to learn a whole programming language in just three weeks. A another big plus is i am able to add this amazing experience onto my portfolio and use this experience for other projects!!"
+                        "AI Camp was a great Journey, and i have always been a self-taught programmer but with AI Camp working with your instructor and teammates you can learn a whole programming language in just three weeks. Another big plus is I am able to add this amazing experience onto my portfolio and use this experience for other projects!!"
                       </p>
                     </div>
                   </div>
@@ -328,12 +339,7 @@
           <a class="prev" onclick="backward()" style="color: purple;">&#10094;</a>
           <a class="next" onclick="forward()" style="color: purple;">&#10095;</a>
 
-    <!--  Page Scroll to Top  -->
-
-    <a class="scroll-to-top" href="#top-header">
-        <i class="fa fa-angle-up"></i>
-    </a>
-
+   
 
     <!-- 
     Essential Scripts
@@ -433,5 +439,7 @@
   </script>
       <script src="js/scripts.js"></script> 
     <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
+  
+  
   </body>
   </html>

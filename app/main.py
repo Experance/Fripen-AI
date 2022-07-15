@@ -136,6 +136,9 @@ def aimodel():
 @app.route(f'{base_url}/ourjourney.html')
 def ourjourney():
     return render_template('ourjourney.html')
+@app.route(f'{base_url}/miscellaneous.html')
+def miscellaneous():
+    return render_template('miscellaneous.html')
 
 
 ## CUSTOM REDIRECTS
@@ -159,6 +162,9 @@ def redirect_uploads_data():
 def redirect_uploads_journey():
      return redirect(url_for('ourjourney'))
 
+@app.route(f'{base_url}/uploads/miscellaneous.html')
+def redirect_misc():
+     return redirect(url_for('miscellaneous'))
 
 
 # define additional routes here

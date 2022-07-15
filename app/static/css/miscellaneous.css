@@ -1,0 +1,28 @@
+html {
+    height: auto;
+    
+}
+
+
+body{
+/*background: url("../images1/blue.jpg") !important no-repeat;*/
+    
+    background: linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% ) no-repeat center center fixed;
+    /*background-size: cover !important;*/
+    height: auto;
+   
+    background-size: cover !important;
+    max-width: 100%;
+    
+    bottom: 0;
+    left: 0;
+    -o-object-fit: contain;
+    object-fit: contain;
+    overflow-y: scroll;
+    
+}
+
+.techstack {
+    flex-basis: 30%;
+    
+}
