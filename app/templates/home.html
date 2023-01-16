@@ -4,16 +4,16 @@
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="it">
-  <meta name="keywords" content="AI, Emotion Detector, AI Project, Deep Learning">
+  <meta name="keywords" content="AI, Ripeness Detector, AI Project, Deep Learning">
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="static/favicon.ico" rel="icon" type="image/x-icon">
     <script crossorigin="anonymous" src=
     "https://use.fontawesome.com/releases/v6.1.0/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Mochiy+Pop+P+One&family=Oswald:wght@500&family=PT+Sans&family=Permanent+Marker&family=Rowdies:wght@700&family=Rubik:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/fripen.css')}}">
-    <link rel="stylesheet" href="/static/plugins/fontawesome/css/all.css">
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='/images1/ourlogo.png')}}">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fripen.css">
+    <link rel="stylesheet" href="plugins/fontawesome/css/all.css">
+    <link rel="icon" type="image/x-icon" href="images1/ourlogo.png">
       <!-- temp ico need to replace-->
     <link href="static/favicon.ico" rel="icon" type="image/x-icon">
     <!-- Font Awesome icons (free version)-->
@@ -33,7 +33,7 @@
        <a class="navbar-brand" style="background: transparent;">
       <div class="logo-image" style=" display: flex; align-items: bottom;">
 
-        <img src="{{ url_for('static', filename='/images1/ourlogo.png')}}" class="img-fluid" style="max-width: 100%; max-height: 100%; ">
+        <img src="images1/ourlogo.png" class="img-fluid" style="max-width: 100%; max-height: 100%; ">
 
       </div>
     </a>
@@ -59,9 +59,12 @@
   
     <div class="inner" id="left">
       <div class="leftinner" id="textleft">
-        
+        <div id="mainTitle">
       <h1 class="heading1" style = "margin-top: 1rem; font-weight: bold; text-shadow: 5px 5px 10px black;">Fruit Ripeness Detector</h1>
+        </div>
+        <div id ="lowerText">
       <p class="p1" style = "margin-top: 1rem; text-indent: 25px;">A groundbreaking computer vision model designed to optimize harvest quality. Upload an image of a red apple, banana, or blueberry and Fripen will detect your fruit and classify it as ripe or unripe.</p>
+       </div>
       </div>
         <div class="box leftinner" id="buttonleft" style = "background: none;">
              <a class="mb-0" id='seefood_button' style = "background: none;">
@@ -79,7 +82,7 @@
   <!-- right side of webpage -->
     <div class="inner" id="right">
       <div style="max-width: 100%; margin-left: 2rem; margin-top: -4rem">
-        <img src="{{ url_for('static', filename='/images1/robo.jpg')}}" class="greenhouse" alt="greenhouse">
+        <img src="images1/robo.jpg" class="greenhouse" alt="greenhouse">
       </div>
     </div>
     
@@ -89,9 +92,9 @@
 
 
     <!-- SCRIPTS -->
-     <script src="{{ url_for('static', filename='plugins/jquery/jquery.min.js')}}"></script>
+     <script src="plugins/jquery/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="{{ url_for('static', filename='js/theme.js')}}"></script>
+    <script src="js/theme.js"></script>
     <script>
         // added to get upload with a button working
         document.getElementById('seefood_button').addEventListener('click', openDialog);
@@ -116,10 +119,10 @@
         });
     </script>
     <script src="js/scripts.js"></script> 
-    <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
+    <script src="js/scripts.js"></script>
 
   <footer class="text-center">
-  <p>Made with love at <a href="https://www.ai-camp.org/" target="_blank" rel="noopener noreferrer" style="background: transparent;">AICamp</a></p>
+  <p style = "position: fixed;bottom: 0;width: 100%;height: 40px;">Made with love at <a href="https://www.ai-camp.org/" target="_blank" rel="noopener noreferrer" style="background: transparent; ">AICamp</a></p>
 </footer>
   </body>
   

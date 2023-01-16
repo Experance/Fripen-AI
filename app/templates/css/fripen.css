@@ -34,7 +34,7 @@ h1{
     /*position: absolute;
     left: 10rem;
     top: 6rem;*/
-    font-size: 4.5rem;
+    font-size: 3rem;
     font-family: Oswald;
     letter-spacing: 3px;
 }
@@ -166,31 +166,59 @@ nav ul li a{
     /*margin-left: 2%;
     margin-right: 30%;*/
     margin-bottom: 2%;
-    width: 100%;
+    
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    
 }
 
 .inner {
-    /*flex-grow: 1;*/
+   
+    
 }
 
 #left {
-    flex-basis: 70%;
+    flex-grow: 1;
+    flex-shrink: 3 !important;
+    flex-wrap: wrap;
     display: flex;
+    flex-basis: 40%;
+    
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
+}
+
+#right {
+    flex-grow: 1;
+    flex-basis: 40%;
 }
 
 #textleft {
     /*flex-grow: 1;*/
+    
     flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#mainTitle {
+    white-space: nowrap;
+    flex-grow: 1;
+    align-self: flex-start; 
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+#lowerText {
+    flex-grow: 1;
 }
 
 #buttonleft {
     /*flex-grow: 1*/
-    flex-basis: 25%;
+    /*flex-basis: 25%; */
     
 }
 
