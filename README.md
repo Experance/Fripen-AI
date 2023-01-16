@@ -8,11 +8,12 @@ Made in 3 weeks from ground zero to ground hero 😆 @AICamp
 ### How To Use
 ***
 
-Go to our website [here](https://cocalc19.ai-camp.dev/1f5857f2-6682-4940-8a34-bfeaf3edb175/port/12345/). 
-[![Picture of the home page](app/static/images1/frontpageofwebsite.png)](https://cocalc19.ai-camp.dev/1f5857f2-6682-4940-8a34-bfeaf3edb175/port/12345/)
+Go to our website [here](https://experance.github.io/Fripen-AI/app/templates/home.html). 
+[![Picture of the home page](app/templates/images1/frontpageofwebsite.png)](https://experance.github.io/Fripen-AI/app/templates/home.html)
 
-
-Click on "Click to test fruit" and upload an image of a banana, apple, or blueberry. Our pretrained model will then detect the fruit and it's level of ripeness.
+(Edit) Unfortunately, due to the current environment (github pages) being static, flask does not work, and thus the AI can't run and look through images. Also, there are some resizing issues as well. But normally....
+Click on "Click to test fruit" and upload an image of a banana, apple, or blueberry. Our pretrained model will then detect the fruit 
+and it's level of ripeness.
 
 ### Roles (About Us)
 ***
