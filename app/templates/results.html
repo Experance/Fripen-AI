@@ -33,7 +33,7 @@
     <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
     <nav id="sidebar-wrapper">
       <ul class="sidebar-nav">
-        <li class="sidebar-brand">
+        <li class="sidebar-brand"></li>
           <a href="home.html"><strong>Ripen</strong></a>
         </li>
 
@@ -65,12 +65,14 @@
         <div class="row">
                 <div class="col justify-content-center align-items-center text-center" style = "margin-top: 5rem">
                     <h3 class="section-title display-4 text-light" style="font-weight: bold; font-size: 5rem; text-shadow: 5px 5px 10px black; ">Recognition Results</h3>
-                    <h3 class="we-found btn-text display-4">We found <strong><span style='text-transform: capitalize;'>{{labels}}!</span></strong></h3>
+                    <h3 id="append" class="we-found btn-text display-4">We found <strong><span style='text-transform: capitalize;'>{{labels}}!</span></strong></h3>
 
-                    {% if labels == 'no emotion' %}
-                    <div>Why might we have missed? Check below!</div>
-                    {% else %}
+                    
+                    {% if confidences != None %}
                     <div class="lead" style="font-weight: bold;"><em>with {{ confidences }} confidence.</em></div>
+                    
+                    {% else %}
+                    <div>Why might we have missed? Check below!</div>
                     {% endif %}
 
                 </div>
@@ -144,7 +146,7 @@
             });
         });
     </script>
-             <script src="js/scripts.js"></script> 
+             
     <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
 </body>
 

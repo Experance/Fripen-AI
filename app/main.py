@@ -5,6 +5,7 @@ from flask import render_template
 from url_utils import get_base_url
 import os
 import torch
+import pandas
 
 # setup the webserver
 # port may need to be changed if there are multiple flask servers running on same server
@@ -83,24 +84,28 @@ def uploaded_file(filename):
     image_path = os.path.join(here, app.config['UPLOAD_FOLDER'], filename)
     results = model(image_path, size=416)
     if len(results.pandas().xyxy) > 0:
-        results.print()
+        print(results.pandas().xyxy)
         save_dir = os.path.join(here, app.config['UPLOAD_FOLDER'])
         results.save(save_dir=save_dir)
         def and_syntax(alist):
             if len(alist) == 1:
                 alist = "".join(alist)
+                print(alist)
                 return alist
             elif len(alist) == 2:
                 alist = " and ".join(alist)
+                print(alist)
                 return alist
             elif len(alist) > 2:
                 alist[-1] = "and " + alist[-1]
                 alist = ", ".join(alist)
+                print(alist)
                 return alist
             else:
                 return
         confidences = list(results.pandas().xyxy[0]['confidence'])
         # confidences: rounding and changing to percent, putting in function
+        
         format_confidences = []
         for percent in confidences:
             format_confidences.append(str(round(percent*100)) + '%')
@@ -116,7 +121,7 @@ def uploaded_file(filename):
                                filename=filename)
     else:
         found = False
-        return render_template('results.html', labels='No Emotion', old_filename=filename, filename=filename)
+        return render_template('results.html', labels='1', old_filename=filename, filename=filename)
 
 
 @app.route(f'{base_url}/uploads/<path:filename>')
@@ -175,7 +180,7 @@ def redirect_misc():
 
 if __name__ == '__main__':
     # IMPORTANT: change url to the site where you are editing this file.
-    website_url = 'cocalc19.ai-camp.dev'
+    website_url = 'http://192.168.1.5:12345'
     
     print(f'Try to open\n\n    https://{website_url}' + base_url + '\n\n')
     app.run(host = '0.0.0.0', port=port, debug=True)

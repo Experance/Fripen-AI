@@ -80,3 +80,7 @@ Start by cloning this repo through the command line:
 After cloning this, clone ultralytics yolov5 in the `app` folder, by running 
 
 `git clone https://github.com/ultralytics/yolov5.git`
+
+and
+
+`pip install -r yolov5/requirements.txt`
