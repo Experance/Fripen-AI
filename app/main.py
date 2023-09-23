@@ -175,7 +175,7 @@ def redirect_misc():
 
 if __name__ == '__main__':
     # IMPORTANT: change url to the site where you are editing this file.
-    website_url = 'cocalc19.ai-camp.dev'
+    website_url = 'http://192.168.1.5:12345'
     
     print(f'Try to open\n\n    https://{website_url}' + base_url + '\n\n')
     app.run(host = '0.0.0.0', port=port, debug=True)
