@@ -98,7 +98,7 @@
                   <b style= "color: purple; text-shadow: 5px 5px 10px purple; opacity: 90%;">Usage</b>:
                 </h1>
                 <h3 class = "display-6 text-left" style = "margin-left: 20px; margin-top: 17px;  font-size: 1.2rem; ">
-                  Use the <b style= "color: purple;">arrows</b> on the left and right side of the screen to scroll through each person. Hover over slides to see more content. Or use the arrow keys on your keyboard to move through the slides. Use up or down keys to flip the cards.(Don't hover over cards at the same time using arrow keys!)
+                  Use the <b style= "color: purple;">arrows</b> on the left and right side of the screen to scroll through each person. Hover over or use the up and down arrow keys on the slides to see more content. 
                 </h3>
               </div>
                   
@@ -336,8 +336,8 @@
           
         </div>
 
-          <a class="prev" onclick="backward()" style="color: purple;">&#10094;</a>
-          <a class="next" onclick="forward()" style="color: purple;">&#10095;</a>
+          <a id="prev" onclick="backward()" style="color: purple;">&#10094;</a>
+          <a id="next" onclick="forward()" style="color: purple;">&#10095;</a>
 
    
 
@@ -379,6 +379,13 @@
                     break;
             }
         });
+
+      document.getElementById("prev").addEventListener('mouseover', function(event){
+        backward();
+      });
+      document.getElementById("next").addEventListener('mouseover', function(event){
+        forward();
+      });
     /*
     document.getElementsByClassName("mySlides")[val].addEventListener('mouseover', function(event){
       idd+= cardIndexs[val];
