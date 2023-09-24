@@ -5,7 +5,8 @@ from flask import render_template
 from url_utils import get_base_url
 import os
 import torch
-import pandas
+import shutil
+from PIL import Image
 
 # setup the webserver
 # port may need to be changed if there are multiple flask servers running on same server
@@ -25,7 +26,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 32 * 1024 * 1024
 app.jinja_options['comment_start_string'] = "##"
 
-model = torch.hub.load("ultralytics/yolov5", "custom", path = 'best.pt', force_reload=True)
+model = torch.hub.load("ultralytics/yolov5", "custom", path = 'best.pt', force_reload=False)
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -82,24 +83,26 @@ def fripen_index():
 def uploaded_file(filename):
     here = os.getcwd()
     image_path = os.path.join(here, app.config['UPLOAD_FOLDER'], filename)
+    
     results = model(image_path, size=416)
     if len(results.pandas().xyxy) > 0:
-        print(results.pandas().xyxy)
-        save_dir = os.path.join(here, app.config['UPLOAD_FOLDER'])
+        results.print()
+        save_dir = os.path.join(here, app.config['UPLOAD_FOLDER'], filename[:-4])
+        os.remove(image_path)
         results.save(save_dir=save_dir)
         def and_syntax(alist):
             if len(alist) == 1:
                 alist = "".join(alist)
-                print(alist)
+                
                 return alist
             elif len(alist) == 2:
                 alist = " and ".join(alist)
-                print(alist)
+               
                 return alist
             elif len(alist) > 2:
                 alist[-1] = "and " + alist[-1]
                 alist = ", ".join(alist)
-                print(alist)
+                
                 return alist
             else:
                 return
@@ -116,9 +119,10 @@ def uploaded_file(filename):
         labels = set(labels)
         labels = [emotion.capitalize() for emotion in labels]
         labels = and_syntax(labels)
+        
         return render_template('results.html', confidences=format_confidences, labels=labels,
                                old_filename=filename,
-                               filename=filename)
+                               filename=filename[:-4]+"/"+filename[:-4]+".jpg")
     else:
         found = False
         return render_template('results.html', labels='1', old_filename=filename, filename=filename)
