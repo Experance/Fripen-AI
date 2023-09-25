@@ -83,7 +83,11 @@ def fripen_index():
 def uploaded_file(filename):
     here = os.getcwd()
     image_path = os.path.join(here, app.config['UPLOAD_FOLDER'], filename)
-    
+    # try:
+            #results = model(image_path, size=416)
+        #except Exception as e:
+         #   if "UnidentifiedImageError" in e:
+          #      print("darn")
     results = model(image_path, size=416)
     if len(results.pandas().xyxy) > 0:
         results.print()

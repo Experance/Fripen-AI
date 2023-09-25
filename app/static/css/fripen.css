@@ -39,16 +39,8 @@ h1{
     letter-spacing: 3px;
 }
 
-.menu{
-    color:white;
-    opacity:1;
-    background:transparent;
-}
-.menu:hover{
-    opacity: 0.5;
-    background:transparent;
-    transition: opacity 1s;
-}
+
+
 .p1{
     /*position: relative;
     left: 10rem;
@@ -163,7 +155,8 @@ nav ul li{
 }
 
 nav ul li a{
-    color: green;
+    color:white;
+    padding:1rem;
     background-color: transparent;
     font-size: 22px;
     text-transform: uppercase;
