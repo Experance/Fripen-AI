@@ -83,15 +83,18 @@ def fripen_index():
 def uploaded_file(filename):
     here = os.getcwd()
     image_path = os.path.join(here, app.config['UPLOAD_FOLDER'], filename)
+    print(f"Current location!: {here}")
+    print(f"Image path: {image_path}")
+
     try:
         results = model(image_path, size=416)
     except Exception as e:
         if "UnidentifiedImageError" in e:
-            return "The image in unidentifiable, it may not avctually be jpg, jpeg, or png file"
+            return "The image in unidentifiable, it may not actually be a jpg, jpeg, or png file"
     results = model(image_path, size=416)
     if len(results.pandas().xyxy) > 0:
         results.print()
-        save_dir = os.path.join(here, app.config['UPLOAD_FOLDER'], filename[:-4])
+        save_dir = os.path.join(here, app.config['UPLOAD_FOLDER'], filename)
         os.remove(image_path)
         results.save(save_dir=save_dir)
         def and_syntax(alist):
@@ -124,9 +127,15 @@ def uploaded_file(filename):
         labels = [emotion.capitalize() for emotion in labels]
         labels = and_syntax(labels)
         
+        
+        # when u don't use Docker (local development, just python3 -m main) use:
+    # return render_template('results.html', confidences=format_confidences, labels=labels, old_filename=filename, filename=filename[:-4]+"/"+filename[:-4]+".jpg")
+        
+
         return render_template('results.html', confidences=format_confidences, labels=labels,
                                old_filename=filename,
-                               filename=filename[:-4]+"/"+filename[:-4]+".jpg")
+                               filename=filename)
+    
     else:
         found = False
         return render_template('results.html', labels='1', old_filename=filename, filename=filename)
@@ -188,7 +197,8 @@ def redirect_misc():
 
 if __name__ == '__main__':
     # IMPORTANT: change url to the site where you are editing this file.
-    website_url = 'http://192.168.1.5:12345'
+    website_url = '192.168.1.3:12345'
     
-    print(f'Try to open\n\n    https://{website_url}' + base_url + '\n\n')
-    app.run(host = '0.0.0.0', port=port, debug=True)
+    #print(f'Try to open\n\n    {website_url}' + base_url + '\n\n')
+    print(f'Try to open\n\n    https://{website_url}' + base_url + '\n\n')   
+    app.run(host = '0.0.0.0', port=port, debug=False)
