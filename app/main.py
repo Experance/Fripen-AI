@@ -96,12 +96,11 @@ def uploaded_file(filename):
     image_path = os.path.join(here, app.config['UPLOAD_FOLDER'], filename)
     print(f"Current location!: {here}")
     print(f"Image path: {image_path}")
-
-    try:
-        results = model(image_path, size=416)
-    except Exception as e:
-        if "UnidentifiedImageError" in e:
-            return "The image in unidentifiable, it may not actually be a jpg, jpeg, or png file"
+    #try:
+    #    results = model(image_path, size=416)
+    #except Exception as e:
+    #    if "UnidentifiedImageError" in e:
+    #        return "The image in unidentifiable, it may not actually be a jpg, jpeg, or png file"
     results = model(image_path, size=416)
     if len(results.pandas().xyxy) > 0:
         results.print()
