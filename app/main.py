@@ -6,6 +6,8 @@ from url_utils import get_base_url
 import os
 import torch
 import shutil
+import logging
+import pandas
 from PIL import Image
 
 # setup the webserver
@@ -25,6 +27,15 @@ ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 32 * 1024 * 1024
 app.jinja_options['comment_start_string'] = "##"
+
+# Add this line to configure logging
+app.logger.setLevel(logging.DEBUG)
+
+
+# Configure a log file handler
+file_handler = logging.FileHandler('app.log')
+file_handler.setLevel(logging.DEBUG)
+app.logger.addHandler(file_handler)
 
 model = torch.hub.load("ultralytics/yolov5", "custom", path = 'best.pt', force_reload=False)
 
