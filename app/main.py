@@ -139,13 +139,12 @@ def uploaded_file(filename):
         
         
         # when u don't use Docker (local development, just python3 -m main) use:
-    # return render_template('results.html', confidences=format_confidences, labels=labels, old_filename=filename, filename=filename[:-4]+"/"+filename[:-4]+".jpg")
-        
+        #return render_template('results.html', confidences=format_confidences, labels=labels, old_filename=filename, filename=filename[:-4]+"/"+filename[:-4]+".jpg")
+
 
         return render_template('results.html', confidences=format_confidences, labels=labels,
                                old_filename=filename,
                                filename=filename)
-    
     else:
         found = False
         return render_template('results.html', labels='1', old_filename=filename, filename=filename)

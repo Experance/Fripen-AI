@@ -79,7 +79,7 @@
  
   <div>
   
-  
+  <button id="disableHover" onclick="hoverswitches()">DisableHover</button>
   <h3 class="text-light" style="font-weight: bold; font-size: 5rem; text-shadow: 5px 5px 10px black; margin: 1rem;">
     About Us
     </h3>
@@ -336,8 +336,8 @@
           
         </div>
 
-          <a id="prev" onclick="backward()" style="color: purple;">&#10094;</a>
-          <a id="next" onclick="forward()" style="color: purple;">&#10095;</a>
+          <a id="prev" style="color: purple;">&#10094;</a>
+          <a id="next" style="color: purple;">&#10095;</a>
 
    
 
@@ -350,6 +350,7 @@
     <script src="{{ url_for('static', filename='js/theme.js')}}"></script>
   <script>
     // arrow keys cause slide to move to next or flip
+    var hoverEvent = true;
     let cardIndexs = [0, 1, 2, 3, 4, 5, 6, 7];
     let val = 0;
     let idd = "#cardflip";
@@ -379,13 +380,12 @@
                     break;
             }
         });
+      hoverEvent ? document.getElementById("prev").addEventListener('mouseover', function(event){backward();})
+      : document.getElementById("prev").addEventListener('click', function(event){backward();});
 
-      document.getElementById("prev").addEventListener('mouseover', function(event){
-        backward();
-      });
-      document.getElementById("next").addEventListener('mouseover', function(event){
-        forward();
-      });
+      !hoverEvent ? document.getElementById("next").addEventListener('mouseover', function(event){forward();})
+      : document.getElementById("next").addEventListener('click', function(event){forward();});
+      
     /*
     document.getElementsByClassName("mySlides")[val].addEventListener('mouseover', function(event){
       idd+= cardIndexs[val];
@@ -431,17 +431,57 @@
     function showSlides(n) {
       let i;
       let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
+      //let dots = document.getElementsByClassName("dot");
       if (n > slides.length) {slideIndex = 1}    
       if (n < 1) {slideIndex = slides.length}
       for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";  
       }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
+      //for (i = 0; i < dots.length; i++) {
+      // dots[i].className = dots[i].className.replace(" active", "");
+      //}
       slides[slideIndex-1].style.display = "flex";
-      dots[slideIndex-1].className += " active";
+      //dots[slideIndex-1].className += " active";
+    }
+
+    function disableMouseHover(){
+      hoverEvent = false;
+      let slides = document.getElementsByClassName("mySlides");
+      for(i = 0; i < slides.length; i++){
+        slides[i].style.pointerEvents = "none";
+      }
+      //changeCSS("{{ url_for('static', filename='css/aboutusstyle2.css')}}", 5)
+    }
+    function enableMouseHover(){
+      hoverEvent = true;
+      let slides = document.getElementsByClassName("mySlides");
+      for(i = 0; i < slides.length; i++){
+        slides[i].style.pointerEvents = "all";      
+      }
+      //changeCSS("{{ url_for('static', filename='css/aboutusstyle.css')}}", 5);
+    }
+    function hoverswitches(){
+      let dis = document.getElementById("disableHover");
+      if(hoverEvent){
+        disableMouseHover();
+        dis.innerHTML = "EnableHover";
+      }else if(!hoverEvent){
+        enableMouseHover();
+        dis.innerHTML = "DisableHover";
+      }
+    }
+
+
+    function changeCSS(cssFile, cssLinkIndex) {
+
+      var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("type", "text/css");
+      newlink.setAttribute("href", cssFile);
+
+      document.getElementsByTagName("head").item(oldlink).replaceChild(newlink, oldlink);
     }
   </script>
       <script src="js/scripts.js"></script> 
