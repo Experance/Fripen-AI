@@ -43,6 +43,9 @@
     ================================================= -->
         
     <!-- Navigation-->
+
+    <button id="disableHover" onclick="hoverswitches()" style="background:transparent; outline:none !important;">Hover</button>
+
     <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
     <nav id="sidebar-wrapper">
       <ul class="sidebar-nav">
@@ -78,9 +81,7 @@
   
  
   <div>
-  
-  <button id="disableHover" onclick="hoverswitches()">DisableHover</button>
-  <h3 class="text-light" style="font-weight: bold; font-size: 5rem; text-shadow: 5px 5px 10px black; margin: 1rem;">
+    <h3 class="text-light" style="font-weight: bold; font-size: 5rem; text-shadow: 5px 5px 10px black; margin: 1rem;">
     About Us
     </h3>
   </div>     
@@ -98,7 +99,7 @@
                   <b style= "color: purple; text-shadow: 5px 5px 10px purple; opacity: 90%;">Usage</b>:
                 </h1>
                 <h3 class = "display-6 text-left" style = "margin-left: 20px; margin-top: 17px;  font-size: 1.2rem; ">
-                  Use the <b style= "color: purple;">arrows</b> on the left and right side of the screen to scroll through each person. Hover over or use the up and down arrow keys on the slides to see more content. 
+                  Use the <b style= "color: purple;">arrows</b> on the left and right side of the screen to scroll through each person. Hover over or use the up and down arrow keys on the slides to see more content. On no hover mode, you can click on the slides to flip them
                 </h3>
               </div>
                   
@@ -110,6 +111,7 @@
               </div>
           </div>
               <!-- CARD NUMBER 1 -->
+              <div class="click">
               <div class = "mySlides" id="cardflip1" style="width: 40rem; height: 25rem; perspective: 1000px; border-radius: 30px;">
                 <div class="flipper">
                   
@@ -139,10 +141,11 @@
                   </div>
               </div>
              </div>
-             
+            </div>
 
           
           <!-- CARD NUMBER 2 -->
+              <div class="click">
               <div class = "mySlides" id="cardflip2" style="width: 40rem; height: 25rem; perspective: 1000px; border-radius: 30px;">
                 <div class="flipper">
                   
@@ -172,10 +175,11 @@
                   </div>
               </div>
              </div>
-          
+            </div>
           
           
           <!-- CARD NUMBER 3 -->
+              <div class="click">
               <div class = "mySlides" id="cardflip3" style="width: 40rem; height: 25rem; perspective: 1000px; border-radius: 30px;">
                 <div class="flipper">
                   
@@ -205,8 +209,9 @@
                   </div>
               </div>
              </div>
-          
+            </div>
           <!-- CARD NUMBER 4 -->
+              <div class="click">
               <div class = "mySlides" id="cardflip4" style="width: 40rem; height: 25rem; perspective: 1000px; border-radius: 30px;">
                 <div class="flipper">
                   
@@ -236,9 +241,10 @@
                   </div>
               </div>
              </div>
-
+            </div>
           
           <!-- CARD NUMBER 5 -->
+              <div class="click">
               <div class = "mySlides" id="cardflip5" style="width: 40rem; height: 25rem; perspective: 1000px; border-radius: 30px;">
                 <div class="flipper">
                   
@@ -268,8 +274,9 @@
                   </div>
               </div>
              </div>
-          
+            </div>
           <!-- CARD NUMBER 6 -->
+              <div class="click">
               <div class = "mySlides" id="cardflip6" style="width: 40rem; height: 25rem; perspective: 1000px; border-radius: 30px;">
                 <div class="flipper">
                   
@@ -299,9 +306,10 @@
                   </div>
               </div>
              </div>
-         
+            </div>
           
           <!-- CARD NUMBER 7 -->
+              <div class="click">
               <div class = "mySlides" id="cardflip7" style="width: 40rem; height: 25rem; perspective: 1000px; border-radius: 30px;">
                 <div class="flipper">
                   
@@ -330,7 +338,7 @@
                   </div>
               </div>
              </div>
-          
+            </div>
           
           
           
@@ -380,11 +388,24 @@
                     break;
             }
         });
-      hoverEvent ? document.getElementById("prev").addEventListener('mouseover', function(event){backward();})
-      : document.getElementById("prev").addEventListener('click', function(event){backward();});
+      
+      document.body.addEventListener('click', (event)=>{
+        if(event.target.className === "click"){
+          if(!hoverEvent){
+            if(val != 0){
+              idd+= cardIndexs[val];
+              document.querySelector(idd).classList.toggle("hover");
+              idd = "#cardflip";
+            }
+          }
+        }
+      })
 
-      !hoverEvent ? document.getElementById("next").addEventListener('mouseover', function(event){forward();})
-      : document.getElementById("next").addEventListener('click', function(event){forward();});
+      document.getElementById("prev").addEventListener('mouseover', function(event){ if(hoverEvent)backward();})
+      document.getElementById("prev").addEventListener('click', function(event){if(!hoverEvent)backward();})
+
+      document.getElementById("next").addEventListener('mouseover', function(event){if(hoverEvent)forward();})
+      document.getElementById("next").addEventListener('click', function(event){if(!hoverEvent)forward();})
       
     /*
     document.getElementsByClassName("mySlides")[val].addEventListener('mouseover', function(event){
@@ -407,7 +428,9 @@
         plusSlides(1);
       }
     }
-    
+    function theVal(){
+      return val;
+    }
     function backward(){
       if(cardIndexs[val] == 0){
         val = 7;
@@ -464,10 +487,10 @@
       let dis = document.getElementById("disableHover");
       if(hoverEvent){
         disableMouseHover();
-        dis.innerHTML = "EnableHover";
+        dis.innerHTML = "NoHover";
       }else if(!hoverEvent){
         enableMouseHover();
-        dis.innerHTML = "DisableHover";
+        dis.innerHTML = "Hover";
       }
     }
 
