@@ -28,6 +28,9 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 32 * 1024 * 1024
 app.jinja_options['comment_start_string'] = "##"
 
+# Increase the request timeout (e.g., to 60 seconds)
+app.config['TIMEOUT'] = 120  # This sets the timeout to 60 seconds
+
 # Add this line to configure logging
 app.logger.setLevel(logging.DEBUG)
 
@@ -94,19 +97,30 @@ def fripen_index():
 def uploaded_file(filename):
     here = os.getcwd()
     image_path = os.path.join(here, app.config['UPLOAD_FOLDER'], filename)
-    print(f"Current location!: {here}")
-    print(f"Image path: {image_path}")
-    #try:
-    #    results = model(image_path, size=416)
-    #except Exception as e:
-    #    if "UnidentifiedImageError" in e:
-    #        return "The image in unidentifiable, it may not actually be a jpg, jpeg, or png file"
-    results = model(image_path, size=416)
+    app.logger.debug(f"Current location!: {here}")
+    app.logger.debug(f"Image path: {image_path}")
+    
+    try:
+        results = model(image_path, size=416)
+    except Exception as e:
+        app.logger.error(f"Error processing image: {str(e)}")
+        return "An error occurred while processing the image."
+
+    app.logger.debug(f"Ran through results")
+
     if len(results.pandas().xyxy) > 0:
         results.print()
+        app.logger.debug(f"Image path: {results.print()}")
+        app.logger.debug(f"Image path entered into if loop")
+
+
         save_dir = os.path.join(here, app.config['UPLOAD_FOLDER'], filename)
         os.remove(image_path)
+        app.logger.debug(f"old image removed")
+
         results.save(save_dir=save_dir)
+        app.logger.debug(f"Results saved into: {save_dir}")
+
         def and_syntax(alist):
             if len(alist) == 1:
                 alist = "".join(alist)
@@ -141,6 +155,7 @@ def uploaded_file(filename):
         # when u don't use Docker (local development, just python3 -m main) use:
     # return render_template('results.html', confidences=format_confidences, labels=labels, old_filename=filename, filename=filename[:-4]+"/"+filename[:-4]+".jpg")
         
+        app.logger.debug(f"AT the RETURN STATEMENT")
 
         return render_template('results.html', confidences=format_confidences, labels=labels,
                                old_filename=filename,
@@ -148,6 +163,8 @@ def uploaded_file(filename):
     
     else:
         found = False
+        app.logger.debug(f"AT the RETURN STATEMENT")
+
         return render_template('results.html', labels='1', old_filename=filename, filename=filename)
 
 
