@@ -320,15 +320,12 @@
           
         </div>
 
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <a id="prev" onclick="plusSlides(-1)" style="color:purple;">&#10094;</a>
+          <a id="next" onclick="plusSlides(1)" style="color:purple;">&#10095;</a>
 
     <!--  Page Scroll to Top  -->
 
-    <a class="scroll-to-top" href="#top-header">
-        <i class="fa fa-angle-up"></i>
-    </a>
-
+ 
 
     <!-- 
     Essential Scripts
@@ -365,17 +362,12 @@
     function showSlides(n) {
       let i;
       let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
       if (n > slides.length) {slideIndex = 1}    
       if (n < 1) {slideIndex = slides.length}
       for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";  
       }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
       slides[slideIndex-1].style.display = "flex";
-      dots[slideIndex-1].className += " active";
     }
   </script>
       <script src="js/scripts.js"></script> 

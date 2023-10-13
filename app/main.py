@@ -156,11 +156,12 @@ def uploaded_file(filename):
     # return render_template('results.html', confidences=format_confidences, labels=labels, old_filename=filename, filename=filename[:-4]+"/"+filename[:-4]+".jpg")
         
         app.logger.debug(f"AT the RETURN STATEMENT")
+        #return render_template('results.html', confidences=format_confidences, labels=labels, old_filename=filename, filename=filename[:-4]+"/"+filename[:-4]+".jpg")
+
 
         return render_template('results.html', confidences=format_confidences, labels=labels,
                                old_filename=filename,
                                filename=filename)
-    
     else:
         found = False
         app.logger.debug(f"AT the RETURN STATEMENT")
