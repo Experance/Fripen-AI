@@ -31,3 +31,4 @@ torchvision==0.15.2
 tzdata==2023.3
 ultralytics==8.0.184
 urllib3==1.26.15
+gunicorn

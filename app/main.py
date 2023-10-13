@@ -40,7 +40,13 @@ file_handler = logging.FileHandler('app.log')
 file_handler.setLevel(logging.DEBUG)
 app.logger.addHandler(file_handler)
 
-model = torch.hub.load("ultralytics/yolov5", "custom", path = 'best.pt', force_reload=False)
+
+try: 
+    model = torch.hub.load("ultralytics/yolov5", "custom", path = 'best.pt', force_reload=False, trust_repo=True)
+    app.logger.error(f"Successful loading of model!")
+    app.logger.error(f"model: {model}")
+except Exception as e:
+        app.logger.error(f"Error loading model: {str(e)}")
 
 def allowed_file(filename):
     return '.' in filename and \

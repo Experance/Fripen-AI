@@ -28,6 +28,8 @@ ADD entrypoint.sh /entrypoint.sh
 ADD config.py /app/config.py
 ADD app/requirements.txt /app/requirements.txt
 ADD get-pip.py /app/get-pip.py
+ADD /app/yolov5 /app/yolov5
+ADD /app/best.pt /app/best.pt
 
 
 # Install pip and dependencies using the locally copied get-pip.py
