@@ -12,7 +12,7 @@ from PIL import Image
 
 # setup the webserver
 # port may need to be changed if there are multiple flask servers running on same server
-port = 12345
+port = int(os.environ.get("PORT", 8000))
 base_url = get_base_url(port)
 
 # if the base url is not empty, then the server is running in development, and we need to specify the static folder so that the static files are served
@@ -231,8 +231,9 @@ def redirect_misc():
 
 if __name__ == '__main__':
     # IMPORTANT: change url to the site where you are editing this file.
-    website_url = '192.168.1.3:12345'
+    website_url = 'fripen-ai.onrender.com'
     
     #print(f'Try to open\n\n    {website_url}' + base_url + '\n\n')
     print(f'Try to open\n\n    https://{website_url}' + base_url + '\n\n')   
+    port = int(os.environ.get("PORT", 8000))
     app.run(host = '0.0.0.0', port=port, debug=False)
