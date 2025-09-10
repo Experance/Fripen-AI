@@ -1,0 +1,26 @@
+Error loading model: No module named 'cv2'
+Current location!: c:\Users\aviel\Desktop\Projects\Other\Testing\Fripen-AI\app
+Image path: c:\Users\aviel\Desktop\Projects\Other\Testing\Fripen-AI\app\static\uploads\blueberrytest.jpg
+Error processing image: name 'model' is not defined
+Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\aviel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\aviel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\aviel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\aviel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\aviel\Desktop\Projects\Other\Testing\Fripen-AI\app\main.py", line 296, in home
+    flash('No selected file')
+    ~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aviel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\helpers.py", line 335, in flash
+    session["_flashes"] = flashes
+    ~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\aviel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\sessions.py", line 104, in _fail
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
