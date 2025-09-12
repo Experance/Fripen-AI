@@ -2,6 +2,9 @@ FROM python:3.8-slim-buster
 USER root
 
 # Install system level dependencies
+RUN sed -i 's|http://deb.debian.org/debian|http://archive.debian.org/debian|g' /etc/apt/sources.list
+RUN echo 'Acquire::Check-Valid-Until "false";' > /etc/apt/apt.conf.d/99no-check-valid-until
+
 RUN apt-get update &&\
     apt-get install\
     gcc\
@@ -28,7 +31,7 @@ ADD entrypoint.sh /entrypoint.sh
 ADD config.py /app/config.py
 ADD app/requirements.txt /app/requirements.txt
 ADD get-pip.py /app/get-pip.py
-ADD /app/yolov5 /app/yolov5
+ADD yolov5 /app/yolov5
 ADD /app/best.pt /app/best.pt
 
 
