@@ -8,7 +8,7 @@ Made in 3 weeks from ground zero to ground hero 😆 @AICamp
 ### How To Use
 ***
 
-Go to our website [here](https://cocalc19.ai-camp.dev/1f5857f2-6682-4940-8a34-bfeaf3edb175/port/12345/). 
+Go to our website [here](https://fripen.avielw.com/). 
 [![Picture of the home page](app/static/images1/frontpageofwebsite.png)](https://cocalc19.ai-camp.dev/1f5857f2-6682-4940-8a34-bfeaf3edb175/port/12345/)
 
 
